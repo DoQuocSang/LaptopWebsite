@@ -1,4 +1,0 @@
-CartComponnent
-Checkout
-HomeComponent
-Page
