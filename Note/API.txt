@@ -1,4 +1,4 @@
----------API----------
+---------API (web-api)----------
 
 *controller
 category_controller.go
@@ -10,7 +10,7 @@ category_models.go
 router.go
 
 
---------Sửa thể loại------- (URL: http://localhost:3000/products?brand=REDMI&brand=HP)
+--------Sửa thể loại (web-frontend)------- 
 
 
 * src => component => ProductComponent => FilterSort.jsx 	### (từ dòng 139 - 181)
