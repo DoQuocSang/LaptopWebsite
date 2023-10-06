@@ -14,7 +14,11 @@ const HomeService = () => {
         <Flex direction={'column'} gap='50px' px="3%" mt="20px">
             <Center>
             <Heading fontSize={{base:'25px',md:'32px'}}>
+<<<<<<< HEAD
                 Services To Help Shop
+=======
+            Dịch vụ trợ giúp cửa hàng
+>>>>>>> Suong
             </Heading>
             </Center>
             <Grid templateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)', lg: 'repeat(3,1fr)' }} gap="20px">
@@ -24,7 +28,11 @@ const HomeService = () => {
                     <Stack mt='6' spacing='4' p="30px" pr="150px" color='blackAlpha.900'>
                         <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}}>{el.text}</Heading>
                         <Text>
+<<<<<<< HEAD
                         Updates on safe Shopping in our Stores
+=======
+                        Thông tin cập nhật về Mua sắm an toàn tại Cửa hàng của chúng tôi
+>>>>>>> Suong
                         </Text>
                     </Stack>
                     <Box bgImage={el.image} w='100%' h='250px' className='homecard' >

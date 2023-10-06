@@ -64,7 +64,11 @@ const CartPage = () => {
       <Box justifyContent={{base:'center',md:'center',lg:'flex'}}  display={"flex"} flexDirection={{ base: 'column', sm: cart.length>0 && "row", md: "column", lg: cart.length>0 && 'row' }}  paddingTop={"20px"} p={'3%'}>
 
         <Flex width={{base:'100%',sm:'90%',md: '100%'}} justifyContent={'center'} direction={'column'}  mt={{base:'50px',md:'20px',lg:'10px'}} >
+<<<<<<< HEAD
           <Center fontWeight={'bold'} fontSize={'24px'} pt={{base:'40px',md:''}}>Your Cart</Center>
+=======
+          <Center fontWeight={'bold'} fontSize={'24px'} pt={{base:'40px',md:''}}>Giỏ Hàng</Center>
+>>>>>>> Suong
           <Divider />
           {cart.length > 0 ? (
 
@@ -81,16 +85,24 @@ const CartPage = () => {
         </Flex>
         <Box display={cartData.length === 0 ? 'none' : 'block'} width={{ base: "100%", sm: '100%', md: '90%', lg: 'sm', xl: 'lg' }} m="auto" pt={"50px"}>
           <Box className='order_summary'>
+<<<<<<< HEAD
             <Text fontWeight={"bold"} color={"gray.500"}>Enter Promo Code</Text>
             <InputGroup>
               <Input value={promo} onChange={(e) => setPromo(e.target.value)} borderRadius={"none"} width={"60%"} type='text' placeholder='Promo Code' />
               <Button onClick={handlePromoCode} bgColor={"blackAlpha.900"} color={"white"} _hover={'none'} borderRadius={"none"} width={"40%"} >Submit</Button>
+=======
+            <Text fontWeight={"bold"} color={"gray.500"}>Nhập mã khuyến mãi</Text>
+            <InputGroup>
+              <Input value={promo} onChange={(e) => setPromo(e.target.value)} borderRadius={"none"} width={"60%"} type='text' placeholder='Promo Code' />
+              <Button onClick={handlePromoCode} bgColor={"blackAlpha.900"} color={"white"} _hover={'none'} borderRadius={"none"} width={"40%"} >Gửi</Button>
+>>>>>>> Suong
             </InputGroup>
 
           </Box>
 
 
           {promoCodeData && <Box  color={'gray.600'} my={'20px'} w={'100%'} display={'flex'} justifyContent={'space-between'}>
+<<<<<<< HEAD
             <Text>Promocode <Button onClick={handlePromoToggle} size={'sm'} fontSize={'14px'} colorScheme='red'>X</Button></Text>
             <Badge colorScheme='green'>{promoCode} applied</Badge>
             </Box>}
@@ -116,6 +128,33 @@ const CartPage = () => {
           </Box>
 
           <Link to="/checkout"><Button _hover={'gray.500'} display={'block'} margin={"auto"} width={"100%"} bgColor={"blackAlpha.900"} color={"white"}>Checkout</Button>
+=======
+            <Text>Mã khuyến mại <Button onClick={handlePromoToggle} size={'sm'} fontSize={'14px'} colorScheme='red'>X</Button></Text>
+            <Badge colorScheme='green'>{promoCode} áp dụng</Badge>
+            </Box>}
+
+          <Box display={"flex"} justifyContent={"space-between"} margin={"20px"}>
+            <Text color={"gray.600"}>Tổng phụ</Text>
+            <Text color={"gray.600"}>$ {promoCodeData ? (totalPrice).toFixed(2) : totalPrice}</Text>
+          </Box>
+
+          <Box display={"flex"} justifyContent={"space-between"} margin={"20px"}>
+            <Text color={"gray.600"}>Thuế 18%</Text>
+            <Text color={"gray.600"}>$ {totalPrice > 0 ? (totalPrice*0.18).toFixed(2) : 0}</Text>
+          </Box>
+
+          <Box display={"flex"} justifyContent={"space-between"} margin={"20px"}>
+            <Text color={"gray.600"}>Giảm giá</Text>
+            <Text color={"gray.600"}>-$ {totalPrice > 0 && promoCodeData ? (totalPrice*0.1).toFixed(2) : 0}</Text>
+          </Box>
+
+          <Box display={"flex"} justifyContent={"space-between"} margin={"20px"}>
+            <Text color={"gray.600"}>Ước tính tổng cộng</Text>
+            <Text color={"gray.600"}>$ {!promoStatus ? (totalPrice + totalPrice*0.18).toFixed(2) : (totalPrice + totalPrice*0.18 - totalPrice*0.1).toFixed(2)}</Text>
+          </Box>
+
+          <Link to="/checkout"><Button _hover={'gray.500'} display={'block'} margin={"auto"} width={"100%"} bgColor={"blackAlpha.900"} color={"white"}>Thanh toán</Button>
+>>>>>>> Suong
           </Link>
         </Box>
 

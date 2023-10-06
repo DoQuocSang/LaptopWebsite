@@ -42,7 +42,11 @@ export const ProductCard = ({
       dispatch(getCartServerdata());
       toast({
         title: 'Yay!!',
+<<<<<<< HEAD
         description: 'Đã thêm vào giỏ hàng',
+=======
+        description: 'Item added successfully',
+>>>>>>> Suong
         status: 'success',
         duration: 4000,
         position: 'top',
@@ -127,7 +131,11 @@ export const ProductCard = ({
             }}
             onClick={handleAdd}
           >
+<<<<<<< HEAD
             Thêm vào giỏ 
+=======
+            Add To Cart
+>>>>>>> Suong
           </Button>
         ) : (
           <Button
@@ -144,7 +152,11 @@ export const ProductCard = ({
               navigate('/cart')
             }}
           >
+<<<<<<< HEAD
             Đến giỏ hàng
+=======
+            Go To Cart
+>>>>>>> Suong
           </Button>
         )}
       </Stack>

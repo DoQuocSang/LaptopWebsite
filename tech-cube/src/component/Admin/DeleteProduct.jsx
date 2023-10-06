@@ -22,17 +22,29 @@ export default function DeleteData({id,children}) {
           <ModalOverlay />
           <ModalContent>
             <ModalBody>
+<<<<<<< HEAD
             <Text>Bạn có chắc chắn muốn xóa sản phẩm này?</Text>
+=======
+            <Text>You want to delete this product, yes press ok or press cancel</Text>
+>>>>>>> Suong
             </ModalBody>
   
             <ModalFooter>
               <Button variant='ghost' mr={3} onClick={onClose}>
+<<<<<<< HEAD
                 Hủy
+=======
+                cancel
+>>>>>>> Suong
               </Button>
               <Button variant='ghost' onClick={()=>{
                deleteRequest(id);
                onClose();
+<<<<<<< HEAD
               }}>Xóa</Button>
+=======
+              }}>Ok</Button>
+>>>>>>> Suong
             </ModalFooter>
           </ModalContent>
         </Modal>

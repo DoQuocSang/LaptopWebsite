@@ -9,7 +9,11 @@ export default function PaymentForm() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
+<<<<<<< HEAD
         Payment method
+=======
+        Phương thức thanh toán
+>>>>>>> Suong
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>

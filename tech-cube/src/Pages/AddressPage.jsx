@@ -66,31 +66,52 @@ export const AddressForm = () => {
       < Box width={{ base: "full", sm: 'full', md: 'sm', lg: 'lg', xl: '2xl' }} >
 
         <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
+<<<<<<< HEAD
           Update Billing Address
+=======
+        Cập nhật địa chỉ thanh toán
+>>>>>>> Suong
         </Heading>
         <Flex>
           <FormControl mr="5%" isRequired>
             <FormLabel htmlFor="first-name" fontWeight={'normal'}>
+<<<<<<< HEAD
               First name
+=======
+              Họ
+>>>>>>> Suong
             </FormLabel>
             <Input id="first-name" placeholder="First name" value={user.name} name='name' onChange={handleChenge} />
           </FormControl>
 
           <FormControl>
             <FormLabel htmlFor="last-name" fontWeight={'normal'}>
+<<<<<<< HEAD
               Last name
+=======
+              Tên
+>>>>>>> Suong
             </FormLabel>
             <Input id="last-name" placeholder="First name" />
           </FormControl>
         </Flex>
         <FormControl mt="2%">
           <FormLabel htmlFor="email" fontWeight={'normal'} >
+<<<<<<< HEAD
             Email address
           </FormLabel>
           <Input type="email" name='email' value={user.email} placeholder='example@abc.com' onChange={handleChenge} />
           <FormHelperText>We'll never share your email.</FormHelperText>
           <FormLabel mt="2%" fontWeight={'normal'}>
             Phone No
+=======
+            Email
+          </FormLabel>
+          <Input type="email" name='email' value={user.email} placeholder='example@abc.com' onChange={handleChenge} />
+          <FormHelperText>Email sẽ được bảo mật.</FormHelperText>
+          <FormLabel mt="2%" fontWeight={'normal'}>
+            Số Điện Thoại
+>>>>>>> Suong
           </FormLabel>
 
           <Input type="tel" name='phone' value={user.phone} placeholder='999999999' maxLength={'10'} onChange={handleChenge} />
@@ -98,13 +119,21 @@ export const AddressForm = () => {
 
         <FormControl>
           <FormLabel fontWeight={'normal'} mt="2%">
+<<<<<<< HEAD
             Address
+=======
+            Địa Chỉ
+>>>>>>> Suong
           </FormLabel>
           <Textarea type="text" name='address' onChange={handleChenge} />
         </FormControl>
         <FormControl>
           <FormLabel fontWeight={'normal'} mt="2%">
+<<<<<<< HEAD
             City
+=======
+           Thành Phố
+>>>>>>> Suong
           </FormLabel>
           <Input type="text" name='city' />
         </FormControl>
@@ -119,7 +148,11 @@ export const AddressForm = () => {
               color: 'gray.50',
             }}
             mt="2%">
+<<<<<<< HEAD
             ZIP / Postal
+=======
+            ZIP / Bưu Điện
+>>>>>>> Suong
           </FormLabel>
           <Input
             type="tel"
@@ -162,24 +195,40 @@ export const PaymentForm = () => {
   return (
     <>
       <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
+<<<<<<< HEAD
         Payment method
+=======
+       Phương thức thanh toán
+>>>>>>> Suong
       </Heading>
       <Grid templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={3}>
         <GridItem colSpan={{ sm: 1, md: 1 / 2 }}>
           <FormControl isRequired>
+<<<<<<< HEAD
             <FormLabel htmlFor="cardName">Name on card</FormLabel>
+=======
+            <FormLabel htmlFor="cardName">Tên</FormLabel>
+>>>>>>> Suong
             <Input type="text" name="cardHolderName" autoComplete="cc-name" placeholder='Johnsmith Doe' onChange={handlechenge} />
           </FormControl>
         </GridItem>
         <GridItem colSpan={{ sm: 1, md: 1 / 2 }}>
           <FormControl isRequired>
+<<<<<<< HEAD
             <FormLabel htmlFor="cardNumber">Card number</FormLabel>
+=======
+            <FormLabel htmlFor="cardNumber">Số thẻ</FormLabel>
+>>>>>>> Suong
             <Input type="text" name="cardNumber" autoComplete="cc-number" maxLength={'16'} onChange={handlechenge} />
           </FormControl>
         </GridItem>
         <GridItem colSpan={{ sm: 1, md: 1 / 2 }}>
           <FormControl isRequired>
+<<<<<<< HEAD
             <FormLabel htmlFor="expDate">Expiry date</FormLabel>
+=======
+            <FormLabel htmlFor="expDate">Ngày hết hạn</FormLabel>
+>>>>>>> Suong
             <Input type="text" name="expDate" autoComplete="cc-exp" placeholder='04/2024' maxLength={'7'} onChange={handlechenge} />
           </FormControl>
         </GridItem>
@@ -187,12 +236,20 @@ export const PaymentForm = () => {
           <FormControl isRequired>
             <FormLabel htmlFor="cvv">CVV</FormLabel>
             <Input type="text" id="cvv" autoComplete="cc-csc" />
+<<<<<<< HEAD
             <FormHelperText>Last three digits on signature strip</FormHelperText>
+=======
+            <FormHelperText>Ba chữ số cuối trên dải chữ ký</FormHelperText>
+>>>>>>> Suong
           </FormControl>
         </GridItem>
         <GridItem colSpan={{ sm: 1 }}>
           <Checkbox colorScheme="green" defaultIsChecked>
+<<<<<<< HEAD
             Remember credit card details for next time
+=======
+          Ghi nhớ chi tiết thẻ tín dụng cho lần tiếp theo
+>>>>>>> Suong
           </Checkbox>
         </GridItem>
       </Grid>
@@ -221,11 +278,19 @@ const Form3 = () => {
   return (
     <>
       <Heading w="100%" textAlign={'center'} fontWeight="normal">
+<<<<<<< HEAD
         Social Handles
       </Heading>
       <Box>
         <Heading as="h6" size="md" mb={2}>
           Order summary
+=======
+      Xử lý
+      </Heading>
+      <Box>
+        <Heading as="h6" size="md" mb={2}>
+        Danh sách
+>>>>>>> Suong
         </Heading>
         <UnorderedList pl={0}>
           {cart?.map((product) => {
@@ -262,6 +327,7 @@ const Form3 = () => {
         <Grid templateColumns={{ sm: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }} gap={4} mt={4}>
           <GridItem colSpan={{ sm: 1, md: 1 / 2 }}>
             <Heading as="h6" size="md" mb={2}>
+<<<<<<< HEAD
               Shipping
             </Heading>
             <Text mb={2}>John Smith</Text>
@@ -270,13 +336,27 @@ const Form3 = () => {
           <GridItem colSpan={{ sm: 1, md: 1 / 2 }}>
             <Heading as="h6" size="md" mb={2}>
               Payment details
+=======
+            Đang chuyển hàng
+            </Heading>
+            <Text mb={2}>John Smith</Text>
+            <Text mb={2}>Trong Heare tôi đã hiển thị Địa chỉ</Text>
+          </GridItem>
+          <GridItem colSpan={{ sm: 1, md: 1 / 2 }}>
+            <Heading as="h6" size="md" mb={2}>
+            Chi tiết thanh toán
+>>>>>>> Suong
             </Heading>
             <Grid templateColumns="repeat(2, 1fr)" gap={2}>
 
 
               <React.Fragment >
                 <GridItem>
+<<<<<<< HEAD
                   <Text fontWeight="semibold">Card type</Text>
+=======
+                  <Text fontWeight="semibold">Loại thẻ</Text>
+>>>>>>> Suong
                 </GridItem>
                 <GridItem>
                   <Text>Visa</Text>
@@ -286,7 +366,11 @@ const Form3 = () => {
 
               <React.Fragment >
                 <GridItem>
+<<<<<<< HEAD
                   <Text fontWeight="semibold">Card holder</Text>
+=======
+                  <Text fontWeight="semibold">Chủ thẻ</Text>
+>>>>>>> Suong
                 </GridItem>
                 <GridItem>
                   <Text>{paymentDetails.cardHolderName}</Text>
@@ -295,7 +379,11 @@ const Form3 = () => {
 
               <React.Fragment >
                 <GridItem>
+<<<<<<< HEAD
                   <Text fontWeight="semibold">Card number</Text>
+=======
+                  <Text fontWeight="semibold">Số thẻ</Text>
+>>>>>>> Suong
                 </GridItem>
                 <GridItem>
                   <Text>'xxxx-xxxx-xxxx-{paymentDetails.cardNumber.substr(paymentDetails.cardNumber.length - 4)}</Text>
@@ -305,7 +393,11 @@ const Form3 = () => {
 
               <React.Fragment >
                 <GridItem>
+<<<<<<< HEAD
                   <Text fontWeight="semibold">Expiry date</Text>
+=======
+                  <Text fontWeight="semibold">Ngày hết hạn</Text>
+>>>>>>> Suong
                 </GridItem>
                 <GridItem>
                   <Text>{paymentDetails.expDate}</Text>
@@ -359,7 +451,11 @@ export const Multistep = () => {
                 variant="solid"
                 w="7rem"
                 mr="5%">
+<<<<<<< HEAD
                 Back
+=======
+                Trở lại
+>>>>>>> Suong
               </Button>
               <Button
                 w="7rem"
@@ -402,7 +498,11 @@ export const Multistep = () => {
                     });
                   }}
                 >
+<<<<<<< HEAD
                   Pay
+=======
+                  Chi trả
+>>>>>>> Suong
                 </Button>
               </Link>
             ) : null}

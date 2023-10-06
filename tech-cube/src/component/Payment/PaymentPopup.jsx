@@ -28,12 +28,20 @@ function PaymentPopup({children,val}) {
           <ModalContent display={'flex'} justifyContent={'center'} alignItems={'center'}>       
             <ModalBody flexDirection={'column'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
              <Image src={success} />
+<<<<<<< HEAD
              <Heading fontSize="20px">Thanh toán thành công!</Heading>
+=======
+             <Heading fontSize="20px">Your Order Placed Successfully</Heading>
+>>>>>>> Suong
             </ModalBody>  
             <ModalFooter>
               <NavLink to='/'>
               <Button colorScheme='blue' mr={3} w="100px" onClick={onClose}>
+<<<<<<< HEAD
                 Cảm ơn
+=======
+                Ok
+>>>>>>> Suong
               </Button>
               </NavLink>
             </ModalFooter>

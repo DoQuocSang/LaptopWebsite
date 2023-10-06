@@ -31,11 +31,19 @@ const HomePage = () => {
       <Box w="100%">
         <Box position={'relative'} w="100%" h='100vh' bgImg={home} bgRepeat={'no-repeat'} bgSize={'cover'} bgPosition={'center'} display={{ base: 'none', md: 'none', lg: 'block' }}>
          <Flex pos={'absolute'} left={'50px'} top={'150px'} direction={'column'} gap="20px" color={'blackAlpha.900'}>
+<<<<<<< HEAD
          <Heading fontSize={'50px'}>Shopping With tech-cube</Heading>
           <Heading>New Experience</Heading>
           <Heading fontSize={'40px'} letterSpacing={'5px'}>GREAT PRICE</Heading>
           <Text fontSize='20px'>save now 20% off on tech-cube</Text>
           <NavLink to="/products"><Button variant={'outline'} borderRadius={'20px'} border={'1px solid black'} w='200px' color={'blackAlpha.900'}>shop now</Button></NavLink>
+=======
+         <Heading fontSize={'50px'}>Mua sắm với tech-cube</Heading>
+          <Heading>Kinh nghiệm mới</Heading>
+          <Heading fontSize={'40px'} letterSpacing={'5px'}>GIÁ TỐT</Heading>
+          <Text fontSize='20px'>tiết kiệm ngay giảm giá 20% cho tech-cube</Text>
+          <NavLink to="/products"><Button variant={'outline'} borderRadius={'20px'} border={'1px solid black'} w='200px' color={'blackAlpha.900'}>mua ngay</Button></NavLink>
+>>>>>>> Suong
          </Flex>
         </Box>
        <Box w="100%" display={{ base: 'block', md: 'block', lg: 'none' }}  >
@@ -53,18 +61,31 @@ const HomePage = () => {
         <Box pos={'relative'} w={{base:'100%',md:'41.5%'}}>
           <Image src="https://demo4techies.com/mage/magetheme108/pub/media/wysiwyg/advertisement/adv-image-1.png" w='100%' />
           <Flex pos={'absolute'} right={'20px'} top={'20px'} direction={'column'} gap="5px" color='blackAlpha.900'>
+<<<<<<< HEAD
             <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}}>Up to</Heading>
             <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}} pl={'30px'}>70%</Heading>
             <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}} pl="50px">Off</Heading>
+=======
+            <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}}>Lên đến</Heading>
+            <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}} pl={'30px'}>70%</Heading>
+            <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}} pl="50px"></Heading>
+>>>>>>> Suong
           </Flex>
         </Box>
         <Box pos={'relative'} w={{base:'100%',md:"59%"}}>
           <Image src="https://demo4techies.com/mage/magetheme108/pub/media/wysiwyg/advertisement/adv-image-2.png" w='100%' />
           <Flex pos={'absolute'} right={'10px'} top={'20px'} direction={'column'} gap="10px" color={'blackAlpha.900'}>
+<<<<<<< HEAD
             <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}}>Headphone</Heading>
             <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}}>Premium sound</Heading>
             <Text>Starting from: $245.00</Text>
             <NavLink to='/products'><Button  w="120px" variant={'outline'} borderRadius={'20px'} border={'1px solid black'} color={'blackAlpha.900'}>shop now</Button></NavLink>
+=======
+            <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}}>Tai nghe</Heading>
+            <Heading fontSize={{base:'18px',sm:'20px',md:'25px'}}>Âm thanh cao cấp</Heading>
+            <Text>Bắt đầu từ: $245.00</Text>
+            <NavLink to='/products'><Button  w="120px" variant={'outline'} borderRadius={'20px'} border={'1px solid black'} color={'blackAlpha.900'}>mua ngay</Button></NavLink>
+>>>>>>> Suong
           </Flex>
         </Box>
       </Flex>

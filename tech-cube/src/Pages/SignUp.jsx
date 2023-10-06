@@ -82,8 +82,13 @@ export default function SignUp() {
 
     if (!firstName || !lastName || !email || !password || !mobile) {
       toast({
+<<<<<<< HEAD
         title: 'Đăng ký thất bại!',
         description: "Vui lòng không để trống các ô",
+=======
+        title: 'Registration Failed.',
+        description: "All fields are required.",
+>>>>>>> Suong
         status: 'warning',
         duration: 4000,
         position: 'top',
@@ -94,8 +99,13 @@ export default function SignUp() {
 
     if (mobile.toString().length !== 10) {
       toast({
+<<<<<<< HEAD
         title: 'Đã xảy ra lỗi!',
         description: "Vui lòng kiểm tra lại các ô nhập liệu",
+=======
+        title: 'Correct details Required!',
+        description: "Please fill valid mobile number!",
+>>>>>>> Suong
         status: 'warning',
         duration: 4000,
         position: 'top',
@@ -114,8 +124,13 @@ export default function SignUp() {
     } else {
       dispatch(signup(userData));
       toast({
+<<<<<<< HEAD
         title: 'Đăng ký thành công!',
         description: "Hãy đăng nhập để tiếp tục.",
+=======
+        title: 'User Registered Successfully.',
+        description: "Please log in to continue.",
+>>>>>>> Suong
         status: 'success',
         duration: 4000,
         position: 'top',
@@ -127,8 +142,13 @@ export default function SignUp() {
     if (!check) {
       dispatch(signup(userData))
       toast({
+<<<<<<< HEAD
         title: 'Tài khoản đã đăng ký thành công!',
         description: "Hãy đăng nhập để tiếp tục.",
+=======
+        title: 'User Registered Successfully.',
+        description: "Please log in to continue.",
+>>>>>>> Suong
         status: 'success',
         duration: 4000,
         position: 'top',
@@ -138,8 +158,13 @@ export default function SignUp() {
     }
 
     (check && toast({
+<<<<<<< HEAD
       title: 'Tài khoản này đã tồn tại.',
       description: "Vui lòng đăng ký hoặc đăng nhập để tiếp tục.",
+=======
+      title: 'User already registered.',
+      description: "Please log in to continue.",
+>>>>>>> Suong
       status: 'error',
       duration: 4000,
       position: 'top',
@@ -164,10 +189,17 @@ export default function SignUp() {
       <Stack w={{base : '95%', sm : '95%', md : '95%', lg : '50%', xl : '50%', '2xl' : '50%'}} spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
         <Stack align={'center'}>
           <Heading fontSize={'4xl'} textAlign={'center'}>
+<<<<<<< HEAD
             Đăng ký thành viên
           </Heading>
           <Heading fontSize={'lg'} color={'gray.500'}>
             Tham gia để trở thành Family
+=======
+            Create your Account
+          </Heading>
+          <Heading fontSize={'lg'} color={'gray.500'}>
+            Join Tech Cube Family
+>>>>>>> Suong
           </Heading>
         </Stack>
         <Box
@@ -178,18 +210,27 @@ export default function SignUp() {
             <form onSubmit={handleSubmit}>
               <Box>
                 <FormControl id="firstName">
+<<<<<<< HEAD
                   <FormLabel>Họ</FormLabel>
+=======
+                  <FormLabel>First Name</FormLabel>
+>>>>>>> Suong
                   <Input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
                 </FormControl>
               </Box>
               <Box>
                 <FormControl id="lastName">
+<<<<<<< HEAD
                   <FormLabel>Tên</FormLabel>
+=======
+                  <FormLabel>Last Name</FormLabel>
+>>>>>>> Suong
                   <Input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
                 </FormControl>
               </Box>
 
               <FormControl id="mobile">
+<<<<<<< HEAD
                 <FormLabel>Số điện thoại</FormLabel>
                 <Input type="number" value={mobile} onChange={(e) => setMobile(+e.target.value)} />
               </FormControl>
@@ -199,6 +240,17 @@ export default function SignUp() {
               </FormControl>
               <FormControl id="password">
                 <FormLabel>Mật khẩu</FormLabel>
+=======
+                <FormLabel>Mobile Number</FormLabel>
+                <Input type="number" value={mobile} onChange={(e) => setMobile(+e.target.value)} />
+              </FormControl>
+              <FormControl id="email">
+                <FormLabel>Email address</FormLabel>
+                <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              </FormControl>
+              <FormControl id="password">
+                <FormLabel>Password</FormLabel>
+>>>>>>> Suong
                 <InputGroup>
                   <Input type={showPassword ? 'text' : 'password'} value={password} onChange={(e) => setPassword(e.target.value)} />
                   <InputRightElement h={'full'}>
@@ -213,7 +265,11 @@ export default function SignUp() {
                 </InputGroup>
               </FormControl>
               <FormControl id="password">
+<<<<<<< HEAD
                 <FormLabel>Xác nhận mật khẩu</FormLabel>
+=======
+                <FormLabel>Confirm Password</FormLabel>
+>>>>>>> Suong
                 <InputGroup>
                   <Input type={showPassword ? 'text' : 'password'} value={confirmpassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                   <InputRightElement h={'full'}>
@@ -237,12 +293,20 @@ export default function SignUp() {
                   _hover={{
                     bg: 'gray.700',
                   }}>
+<<<<<<< HEAD
                   Đăng ký
+=======
+                  Sign up
+>>>>>>> Suong
                 </Button>
               </Stack>
               <Stack pt={6}>
                 <Text align={'center'}>
+<<<<<<< HEAD
                 Bạn đã có tài khoản? <NavLink style={{marginLeft : '5px', color : '#4299e1', textDecoration : 'underline'}} to='/login'>Đăng nhập</NavLink>
+=======
+                  Already a user? <NavLink style={{marginLeft : '5px', color : '#4299e1', textDecoration : 'underline'}} to='/login'>Login</NavLink>
+>>>>>>> Suong
                 </Text>
               </Stack>
             </form>

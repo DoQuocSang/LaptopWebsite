@@ -30,9 +30,15 @@ const SidebarContent = ({ onClose, ...rest }) => {
 
     const LinkItems = [
         { name: 'Dashboard', icon: FiHome, fun: dashBoard },
+<<<<<<< HEAD
         { name: 'Tài khoản Admin', icon: FiTrendingUp, fun: adminRow },
         { name: 'Tài khoản User', icon: FiCompass, fun: userRow },
         { name: 'Sản phẩm', icon: FiStar, fun: allProd },
+=======
+        { name: 'Admin Profile', icon: FiTrendingUp, fun: adminRow },
+        { name: 'User Profile', icon: FiCompass, fun: userRow },
+        { name: 'All Product', icon: FiStar, fun: allProd },
+>>>>>>> Suong
         // { name: 'Home', icon: FiSettings },
     ];
     return (
@@ -63,7 +69,11 @@ const SidebarContent = ({ onClose, ...rest }) => {
                         }}
                             as={FiHome}
                         />                  
+<<<<<<< HEAD
                      Trang chủ
+=======
+                     Home
+>>>>>>> Suong
                 </Flex>
             </NavLink>
         </Box>

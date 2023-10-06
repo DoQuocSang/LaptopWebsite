@@ -80,11 +80,19 @@ function AddProduct({ children }) {
       <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
+<<<<<<< HEAD
           <ModalHeader w='100%' fontWeight={'bolder'} >Thêm sản phẩm mới</ModalHeader>
           <ModalBody>
             <Flex direction={'column'} gap='8px'>
               <Flex direction={'column'}>
                 <FormLabel fontWeight="bold">Tên sản phẩm</FormLabel>
+=======
+          <ModalHeader w='100%' fontWeight={'bolder'} >New Product</ModalHeader>
+          <ModalBody>
+            <Flex direction={'column'} gap='8px'>
+              <Flex direction={'column'}>
+                <FormLabel fontWeight="bold">title</FormLabel>
+>>>>>>> Suong
                 <Input onChange={(e)=>setForm({type:'title',payload:e.target.value})} value={title} name="title" />
               </Flex>
               <Flex direction={'column'}>
@@ -93,25 +101,45 @@ function AddProduct({ children }) {
               </Flex>
               <Flex gap='15px'>
                 <Flex direction={'column'}>
+<<<<<<< HEAD
                   <FormLabel fontWeight="bold">Giá</FormLabel>
                   <Input onChange={(e)=>setForm({type:'price',payload:e.target.value})} value={price} name="price" />
                 </Flex>
                 <Flex direction={'column'}>
                   <FormLabel fontWeight="bold">Color</FormLabel>
+=======
+                  <FormLabel fontWeight="bold">price</FormLabel>
+                  <Input onChange={(e)=>setForm({type:'price',payload:e.target.value})} value={price} name="price" />
+                </Flex>
+                <Flex direction={'column'}>
+                  <FormLabel fontWeight="bold">color</FormLabel>
+>>>>>>> Suong
                   <Input onChange={(e)=>setForm({type:'color',payload:e.target.value})} value={color} name="color" />
                 </Flex>
               </Flex>
               <Flex direction={'column'}>
+<<<<<<< HEAD
                 <FormLabel fontWeight="bold">Mô tả</FormLabel>
+=======
+                <FormLabel fontWeight="bold">description</FormLabel>
+>>>>>>> Suong
                 <Input onChange={(e)=>setForm({type:'description',payload:e.target.value})} value={description} name="description" />
               </Flex>
               <Flex gap='15px'>
                 <Flex direction={'column'}>
+<<<<<<< HEAD
                   <FormLabel fontWeight="bold">Loại sản phẩm</FormLabel>
                   <Input onChange={(e)=>setForm({type:'category',payload:e.target.value})} value={category} name="category" />
                 </Flex>
                 <Flex direction={'column'}>
                   <FormLabel fontWeight="bold">Thương hiệu</FormLabel>
+=======
+                  <FormLabel fontWeight="bold">category</FormLabel>
+                  <Input onChange={(e)=>setForm({type:'category',payload:e.target.value})} value={category} name="category" />
+                </Flex>
+                <Flex direction={'column'}>
+                  <FormLabel fontWeight="bold">brand</FormLabel>
+>>>>>>> Suong
                   <Input onChange={(e)=>setForm({type:'brand',payload:e.target.value})} value={gender} name="brand" />
                 </Flex>
               </Flex>
@@ -121,12 +149,20 @@ function AddProduct({ children }) {
           <ModalFooter>
             <Flex justify={'flex-end'} w='100%'>
               <Button variant={'ghost'} mr={3} onClick={onClose}>
+<<<<<<< HEAD
                 Hủy
+=======
+                cancel
+>>>>>>> Suong
               </Button>
               <Button onClick={(e)=>{ 
               handleSubmit(e);
               onClose()
+<<<<<<< HEAD
               }} variant={'ghost'}>Thêm sản phẩm</Button>
+=======
+              }} variant={'ghost'}>Add Product</Button>
+>>>>>>> Suong
             </Flex>
           </ModalFooter>
         </ModalContent>

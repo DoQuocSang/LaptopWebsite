@@ -62,7 +62,11 @@ const handleSubmit=()=>{
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
+<<<<<<< HEAD
         Shipping address
+=======
+        Địa chỉ thanh toán
+>>>>>>> Suong
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
@@ -195,7 +199,11 @@ const handleSubmit=()=>{
           />
         </Grid>
 
+<<<<<<< HEAD
     <Button onSubmit={handleSubmit}>Save</Button>
+=======
+    <Button onSubmit={handleSubmit}>Lưu</Button>
+>>>>>>> Suong
 
       </Grid>
     </React.Fragment>

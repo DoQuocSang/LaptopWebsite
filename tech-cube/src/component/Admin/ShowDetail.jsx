@@ -43,9 +43,15 @@ const ShowDetail = ({ children, child,fun }) => {
                         <Flex direction={'column'} alignItems={'center'}>
                             <Avatar src={child.pic} name={`${child.firstName} ${child.lastName}`} w='110px' h='110px' />
                             <Flex direction={'column'} gap="5px">
+<<<<<<< HEAD
                                 <Text fontWeight={'bold'}>Tên: {`${child.firstName} ${child.lastName}`}</Text>
                                 <Text fontWeight={'bold'}>Email: {child.email}</Text>
                                 <Text fontWeight={'bold'}>Mật khẩu: {child.password}</Text>
+=======
+                                <Text fontWeight={'bold'}>Name: {`${child.firstName} ${child.lastName}`}</Text>
+                                <Text fontWeight={'bold'}>Email: {child.email}</Text>
+                                <Text fontWeight={'bold'}>Password: {child.password}</Text>
+>>>>>>> Suong
                             </Flex>
                         </Flex>
                     </ModalBody>

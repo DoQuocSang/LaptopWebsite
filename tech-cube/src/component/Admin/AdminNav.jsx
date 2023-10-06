@@ -21,7 +21,11 @@ const AdminNav = ({ onOpen, ...rest }) => {
         aria-label="open menu"
         icon={<FiMenu />}
       />
+<<<<<<< HEAD
     <Input w="300px" bg="white" placeholder="Tìm kiếm" />
+=======
+    <Input w="300px" bg="white" placeholder="search" />
+>>>>>>> Suong
       <Text
         display={{ base: 'flex', md: 'flex' }}
         fontSize="2xl"

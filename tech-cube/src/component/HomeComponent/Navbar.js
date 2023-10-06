@@ -192,7 +192,11 @@ export default function Navbar() {
         >
           <Input
             pr="4.5rem"
+<<<<<<< HEAD
             placeholder="Tìm kiếm"
+=======
+            placeholder="search"
+>>>>>>> Suong
             onChange={e => handleDebounce(e.target.value)}
           />
           <InputRightElement width="4.5rem">
@@ -212,7 +216,11 @@ export default function Navbar() {
           <Menu>
 
             <MenuList>
+<<<<<<< HEAD
               {auth ? <MenuItem>Hello {user.firstName} {user.lastName}</MenuItem> :
+=======
+              {auth ? <MenuItem>Xin chào {user.firstName} {user.lastName}</MenuItem> :
+>>>>>>> Suong
                 <NavLink to='/signup'><MenuItem>{'login / signup'}</MenuItem></NavLink>
               }
             </MenuList>
@@ -226,7 +234,11 @@ export default function Navbar() {
             <MenuList>
               {auth ? (
                 <MenuItem>
+<<<<<<< HEAD
                   Hello {user.firstName} {user.lastName}
+=======
+                  Xin Chào {user.firstName} {user.lastName}
+>>>>>>> Suong
                 </MenuItem>
               ) : (
                 <NavLink to="/signup">
@@ -235,9 +247,15 @@ export default function Navbar() {
               )}
 
               <MenuItem>
+<<<<<<< HEAD
                 <UserProfile data={user}>User Profile</UserProfile>
               </MenuItem>
               <MenuItem isDisabled={!auth} onClick={handleLogout}>LogOut</MenuItem>
+=======
+                <UserProfile data={user}>Hồ Sơ</UserProfile>
+              </MenuItem>
+              <MenuItem isDisabled={!auth} onClick={handleLogout}>Đăng Xuất</MenuItem>
+>>>>>>> Suong
               <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
 
             </MenuList>
@@ -294,7 +312,11 @@ export default function Navbar() {
             <Menu>
 
               <MenuList>
+<<<<<<< HEAD
                 {auth ? <MenuItem>Hello {user.firstName} {user.lastName}</MenuItem> :
+=======
+                {auth ? <MenuItem>Xin Chào {user.firstName} {user.lastName}</MenuItem> :
+>>>>>>> Suong
                   <NavLink to='/signup'><MenuItem>{'login / signup'}</MenuItem></NavLink>
                 }
               </MenuList>
@@ -308,7 +330,11 @@ export default function Navbar() {
               <MenuList>
                 {auth ? (
                   <MenuItem>
+<<<<<<< HEAD
                     Hello {user.firstName} {user.lastName}
+=======
+                   Xin Chào  {user.firstName} {user.lastName}
+>>>>>>> Suong
                   </MenuItem>
                 ) : (
                   <NavLink to="/signup">
@@ -317,9 +343,15 @@ export default function Navbar() {
                 )}
 
                 <MenuItem>
+<<<<<<< HEAD
                   <UserProfile data={user}>User Profile</UserProfile>
                 </MenuItem>
                 <MenuItem isDisabled={!auth} onClick={handleLogout}>LogOut</MenuItem>
+=======
+                  <UserProfile data={user}>Hồ Sơ</UserProfile>
+                </MenuItem>
+                <MenuItem isDisabled={!auth} onClick={handleLogout}>Đăng Xuất</MenuItem>
+>>>>>>> Suong
                 <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
 
               </MenuList>

@@ -38,7 +38,11 @@ function UserProfile({ name, children, data }) {
 
                     <ModalFooter>
                         <Button colorScheme='blue' mr={3} onClick={onClose}>
+<<<<<<< HEAD
                             Close
+=======
+                            Đóng
+>>>>>>> Suong
                         </Button>
                     </ModalFooter>
                 </ModalContent>

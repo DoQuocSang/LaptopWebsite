@@ -23,8 +23,13 @@ useEffect(()=>{
     return (
         <Flex direction={'column'} bg='white' borderRadius={'10px'}>
             <Flex justify={'space-between'} px={{ base: '7px', md: '20px', lg: '50px' }} alignItems={'center'} py="8px">
+<<<<<<< HEAD
                 <Text fontSize={'20px'} fontWeight={'bolder'}>Tổng số sản phẩm - {count}</Text>
                 <AddProduct>Thêm sản phẩm</AddProduct>
+=======
+                <Text fontSize={'20px'} fontWeight={'bolder'}>Total Products - {count}</Text>
+                <AddProduct>Add New Product</AddProduct>
+>>>>>>> Suong
             </Flex>
             <Box w="98%" h={{ base: "100vh", md: '100vh', lg: '450px' }} direction={'column'} overflowY={'scroll'} >
 
@@ -35,14 +40,23 @@ useEffect(()=>{
                                 <Image src={el.image[0]} w='70px' h='70px' borderRadius={'50%'} />
                                 <Text>{el.title.substring(0,20)}</Text>
                                 <Box display={{ base: 'block', md: 'none' }}>
+<<<<<<< HEAD
                                     <ProductDetail child={el}>Xem chi tiết</ProductDetail>
+=======
+                                    <ProductDetail child={el}>show detail</ProductDetail>
+>>>>>>> Suong
                                 </Box>
                                 <Text display={{ base: 'none', md: 'block' }}>{el.brand}</Text>
                                 <Text display={{ base: 'none', md: 'block' }}>{el.price}</Text>
                             </Flex>
                             <Flex gap={{ base: '30px', md: '30px', lg: '50px' }} display={{ base: 'none', md: 'flex' }} >
+<<<<<<< HEAD
                                 <EditProduct id={el.id}>Sửa</EditProduct>
                                 <DeleteData id={el.id}>Xóa</DeleteData>
+=======
+                                <EditProduct id={el.id}>Edit</EditProduct>
+                                <DeleteData id={el.id}>Delete</DeleteData>
+>>>>>>> Suong
                                 {/* <Button bg="red.600" colorScheme="white">Delete</Button> */}
                             </Flex>
                         </Flex>

@@ -21,7 +21,11 @@ const BestDeal = () => {
       <Flex direction={'column'} px="3%" gap="50px">
       <Center>
       <Heading fontSize={{base:'25px',md:'32px'}}>
+<<<<<<< HEAD
           Today's Best Deal For You
+=======
+      Ưu đãi tốt nhất hôm nay
+>>>>>>> Suong
         </Heading>
       </Center>
         <Grid templateColumns={{ base: 'repeat(1,1fr)',sm:'repeat(2,1fr)', md: 'repeat(3,1fr)', lg: 'repeat(4,1fr)' }} gap="20px" >
@@ -37,7 +41,11 @@ const BestDeal = () => {
                 <Stack px="5px">
                 <Text fontWeight={'bold'} fontSize={'18px'} color={textColor}>{el.text}</Text>
                   <Flex gap="20px" color={text==='dark'?'white':'blackAlpha.900'}>                    
+<<<<<<< HEAD
                     <Text fontWeight={'bold'} color={textColor} fontSize={'18px'}>₹{el.price}</Text>
+=======
+                    <Text fontWeight={'bold'} color={textColor} fontSize={'18px'}>${el.price}</Text>  
+>>>>>>> Suong
                     <Text fontWeight={'bold'} color={'green'} fontSize={'18px'}>{el.disc}% off</Text>
                   </Flex>
                   <Text fontSize={'14px'} color={textColor}>{el.description}</Text>
@@ -48,7 +56,11 @@ const BestDeal = () => {
                     <Text color={'green'} fontSize={'19px'}>&#9733;</Text>
                     <Text color={'green'} fontSize={'19px'}>&#9733;</Text>
                   </Flex>
+<<<<<<< HEAD
                   <NavLink to={`/products/${el.id}`}><Button variant={'unstyled'} border={'1px solid black'} w="120px" borderRadius={'40px'}>View Details</Button></NavLink>
+=======
+                  <NavLink to={`/products/${el.id}`}><Button variant={'unstyled'} border={'1px solid black'} w="120px" borderRadius={'40px'}>Xem Thêm Thông Tin</Button></NavLink>
+>>>>>>> Suong
                 </Stack>
                 <Box p="10px" bg='white' borderRadius={'50%'} pos={'absolute'} right={'11px'} top="15px" _hover={{ bg: 'pink' }} >
                   <Image src="https://uploads-ssl.webflow.com/63e857eaeaf853471d5335ff/63e9df775b939f51a0b22f6d_Icon.svg" w='20px' />

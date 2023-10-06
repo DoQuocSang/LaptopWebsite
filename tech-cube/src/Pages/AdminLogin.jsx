@@ -51,8 +51,13 @@ const AdminLogin = () => {
        if(newData){
         if(newData.password === password){
             toast({
+<<<<<<< HEAD
             title: 'Đăng nhập thành công',
             description: "Đang chuyển hướng đến trang quản trị",
+=======
+            title: 'successfully login',
+            description: "Redirecting to admin page",
+>>>>>>> Suong
             status: 'success',
             duration: 3000,
             isClosable: true,
@@ -66,8 +71,13 @@ const AdminLogin = () => {
           return;
         }else{
             toast({
+<<<<<<< HEAD
                 title: 'Lỗi!',
                 description: "Mật khẩu không đúng",
+=======
+                title: 'failed',
+                description: "password didn't match",
+>>>>>>> Suong
                 status: 'warning',
                 duration: 3000,
                 isClosable: true,
@@ -77,8 +87,13 @@ const AdminLogin = () => {
         }
        }else{
         toast({
+<<<<<<< HEAD
             title: 'Thông tin xác thực sai!',
             description: "Vui lòng kiểm tra email hoặc mật khẩu của bạn.",
+=======
+            title: 'wrong credential',
+            description: "please check your email or password",
+>>>>>>> Suong
             status: 'error',
             duration: 3000,
             isClosable: true,
@@ -98,7 +113,11 @@ const AdminLogin = () => {
             bg={useColorModeValue('gray.50', 'gray.800')}>
             <Stack spacing={8} mx={'auto'} maxW={{base:'full',md:'lg'}} py={12} px={{base:2,md:6}}>
                 <Stack align={'center'}>
+<<<<<<< HEAD
                     <Heading fontSize={'4xl'}>Admin Login</Heading>
+=======
+                    <Heading fontSize={'4xl'}>Đăng nhập Admin</Heading>
+>>>>>>> Suong
                 </Stack>
                 <Box
                     rounded={'lg'}
@@ -108,11 +127,19 @@ const AdminLogin = () => {
                     <form onSubmit={handleSubmit}>
                         <Stack spacing={4}>
                             <FormControl id="email">
+<<<<<<< HEAD
                                 <FormLabel>Email address</FormLabel>
                                 <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                             </FormControl>
                             <FormControl id="password">
                                 <FormLabel>Password</FormLabel>
+=======
+                                <FormLabel>Email </FormLabel>
+                                <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            </FormControl>
+                            <FormControl id="password">
+                                <FormLabel>Mật khẩu</FormLabel>
+>>>>>>> Suong
                                 <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                             </FormControl>
                             <Stack spacing={10}>
@@ -120,8 +147,13 @@ const AdminLogin = () => {
                                     direction={{ base: 'column', sm: 'row' }}
                                     align={'start'}
                                     justify={'space-between'}>
+<<<<<<< HEAD
                                     <Checkbox>Remember me</Checkbox>
                                     <Link color={'blue.400'}>Forgot password?</Link>
+=======
+                                    <Checkbox>Nhớ tài khoản</Checkbox>
+                                    <Link color={'blue.400'}>Quên mật khẩu</Link>
+>>>>>>> Suong
                                 </Stack>
                                 <Button
                                     bg={'blue.400'}
@@ -130,7 +162,11 @@ const AdminLogin = () => {
                                     _hover={{
                                         bg: 'blue.500',
                                     }}>
+<<<<<<< HEAD
                                     Sign in
+=======
+                                    Đăng nhập
+>>>>>>> Suong
                                 </Button>
                             </Stack>
                         </Stack>

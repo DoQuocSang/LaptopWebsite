@@ -132,7 +132,11 @@ const Login = () => {
         direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}>
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Stack align={'center'}>
+<<<<<<< HEAD
             <Heading fontSize={'4xl'}>Sign in to your Account</Heading>
+=======
+            <Heading fontSize={'4xl'}>Đăng nhập</Heading>
+>>>>>>> Suong
           </Stack>
           <Box
             rounded={'lg'}
@@ -141,11 +145,19 @@ const Login = () => {
             <form onSubmit={handleSubmit}>
               <Stack spacing={4}>
                 <FormControl id="email">
+<<<<<<< HEAD
                   <FormLabel>Email address</FormLabel>
                   <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </FormControl>
                 <FormControl id="password">
                   <FormLabel>Password</FormLabel>
+=======
+                  <FormLabel>Email</FormLabel>
+                  <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                </FormControl>
+                <FormControl id="password">
+                  <FormLabel>Mật khẩu</FormLabel>
+>>>>>>> Suong
                   <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
                 </FormControl>
                 <Stack spacing={10}>
@@ -153,8 +165,13 @@ const Login = () => {
                     direction={{ base: 'column', sm: 'row' }}
                     align={'start'}
                     justify={'space-between'}>
+<<<<<<< HEAD
                     <Checkbox>Remember me</Checkbox>
                     <Link color={'blue.400'}>Forgot password?</Link>
+=======
+                    <Checkbox>nhớ</Checkbox>
+                    <Link color={'blue.400'}>Quên mật khẩu?</Link>
+>>>>>>> Suong
                   </Stack>
                   <Button
                     bg={'black'}
@@ -163,14 +180,23 @@ const Login = () => {
                     _hover={{
                       bg: 'gray.700',
                     }}>
+<<<<<<< HEAD
                     Sign in
+=======
+                   Đăng nhập
+>>>>>>> Suong
                   </Button>
                 </Stack>
               </Stack>
             </form>
             <Flex w='90%' mt='20px' justifyContent='center'>
+<<<<<<< HEAD
               <Text>New here?</Text>
               <NavLink style={{ marginLeft: '10px', color: '#4299e1', textDecoration: 'underline' }} to='/signup'>Sign Up</NavLink>
+=======
+              <Text>Thêm?</Text>
+              <NavLink style={{ marginLeft: '10px', color: '#4299e1', textDecoration: 'underline' }} to='/signup'>Đăng ký</NavLink>
+>>>>>>> Suong
             </Flex>
           </Box>
         </Stack>

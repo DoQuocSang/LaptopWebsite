@@ -97,7 +97,11 @@ export const FilterSort = () => {
             colorScheme="gray"
             rightIcon={<HiChevronDown />}
           >
+<<<<<<< HEAD
             Điện thoại
+=======
+            Mobile Phones
+>>>>>>> Suong
           </MenuButton>
           <MenuList w="100px">
             <Flex
@@ -185,7 +189,11 @@ export const FilterSort = () => {
             colorScheme="gray"
             rightIcon={<HiChevronDown />}
           >
+<<<<<<< HEAD
             Tivi
+=======
+            Televisions
+>>>>>>> Suong
           </MenuButton>
           <MenuList minWidth="240px">
             <Flex
@@ -224,7 +232,11 @@ export const FilterSort = () => {
             colorScheme="gray"
             rightIcon={<HiChevronDown />}
           >
+<<<<<<< HEAD
             Tai nghe & Speakers
+=======
+            Earphones & Speakers
+>>>>>>> Suong
           </MenuButton>
           <MenuList minWidth="240px">
             <Flex
@@ -276,7 +288,11 @@ export const FilterSort = () => {
             colorScheme="gray"
             rightIcon={<HiChevronDown />}
           >
+<<<<<<< HEAD
             Phụ kiện khác
+=======
+            Other Accessories
+>>>>>>> Suong
           </MenuButton>
           <MenuList minWidth="240px">
             <Flex
@@ -319,7 +335,11 @@ export const FilterSort = () => {
               onChange={handleSort}
               bg={text === 'light' ? '#2c313d' : '#edf2f7'}
             >
+<<<<<<< HEAD
               <option value={''}>Lọc theo giá</option>
+=======
+              <option value={''}>Sort By Price</option>
+>>>>>>> Suong
 
               <option value={'asc'} name="order" selected={order === 'asc'}>
                 Ascending

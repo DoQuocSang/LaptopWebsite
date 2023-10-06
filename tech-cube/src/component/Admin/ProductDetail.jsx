@@ -28,6 +28,7 @@ const ProductDetail = ({ children, child }) => {
                         <Flex direction={'column'} alignItems={'center'}>
                             <Avatar src={child.image[0]} name="error" w='120px' h='120px' />
                             <Flex direction={'column'} gap="5px">
+<<<<<<< HEAD
                                 <Text fontWeight={'bold'}>Tiêu đề: {child.title.substring(0, 18)}..</Text>
                                 <Text fontWeight={'bold'}>Mô tả: {child.description.substring(0, 20)}..</Text>
                                 <Text fontWeight={'bold'}>Giá: VNĐ {child.price}</Text>
@@ -36,12 +37,27 @@ const ProductDetail = ({ children, child }) => {
                                     <Box borderRadius={'50%'} w='20px' h='20px' bg={child.color[0]}></Box>
                                 </Flex>
                                 <Text fontWeight={'bold'}>Thương hiệu: {child.brand}</Text>
+=======
+                                <Text fontWeight={'bold'}>title: {child.title.substring(0, 18)}..</Text>
+                                <Text fontWeight={'bold'}>description: {child.description.substring(0, 20)}..</Text>
+                                <Text fontWeight={'bold'}>price: $ {child.price}</Text>
+                                <Flex gap='10px'>
+                                    <Text fontWeight={'bold'}>color:</Text>
+                                    <Box borderRadius={'50%'} w='20px' h='20px' bg={child.color[0]}></Box>
+                                </Flex>
+                                <Text fontWeight={'bold'}>brand: {child.brand}</Text>
+>>>>>>> Suong
                             </Flex>
                         </Flex>
                     </ModalBody>
                     <Flex justifyContent={'flex-end'} gap="15px">
+<<<<<<< HEAD
                         <EditProduct id={child.id}>Sửa</EditProduct>
                         <DeleteData id={child.id}>Xóa</DeleteData>
+=======
+                        <EditProduct id={child.id}>Edit</EditProduct>
+                        <DeleteData id={child.id}>Delete</DeleteData>
+>>>>>>> Suong
                     </Flex>
                     <ModalFooter>
                     </ModalFooter>

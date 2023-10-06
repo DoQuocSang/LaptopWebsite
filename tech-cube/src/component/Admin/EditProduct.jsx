@@ -67,11 +67,19 @@ function EditProduct({ id , children }) {
             <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
+<<<<<<< HEAD
                     <ModalHeader fontWeight={'bolder'} w='full'>Sửa sản phẩm</ModalHeader>
                     <ModalBody>
                         <Flex direction={'column'} gap='8px'>
                             <Flex direction={'column'}>
                                 <FormLabel fontWeight="bold">Tên sản phẩm</FormLabel>
+=======
+                    <ModalHeader fontWeight={'bolder'} w='full'>Edit Product</ModalHeader>
+                    <ModalBody>
+                        <Flex direction={'column'} gap='8px'>
+                            <Flex direction={'column'}>
+                                <FormLabel fontWeight="bold">title</FormLabel>
+>>>>>>> Suong
                                 <Input onChange={handleChange} name="title" value={data.title} />
                             </Flex>
                             <Flex direction={'column'}>
@@ -80,25 +88,45 @@ function EditProduct({ id , children }) {
                             </Flex>
                             <Flex gap='15px'>
                                 <Flex direction={'column'}>
+<<<<<<< HEAD
                                     <FormLabel fontWeight="bold">Loại sản phẩm</FormLabel>
                                     <Input onChange={handleChange} name="category" value={data.category} />
                                 </Flex>
                                 <Flex direction={'column'}>
                                     <FormLabel fontWeight="bold">Color</FormLabel>
+=======
+                                    <FormLabel fontWeight="bold">category</FormLabel>
+                                    <Input onChange={handleChange} name="category" value={data.category} />
+                                </Flex>
+                                <Flex direction={'column'}>
+                                    <FormLabel fontWeight="bold">color</FormLabel>
+>>>>>>> Suong
                                     <Input onChange={handleChange} name="color" value={data.color} />
                                 </Flex>
                             </Flex>
                             <Flex direction={'column'}>
+<<<<<<< HEAD
                                 <FormLabel fontWeight="bold">Mô tả</FormLabel>
+=======
+                                <FormLabel fontWeight="bold">description</FormLabel>
+>>>>>>> Suong
                                 <Input onChange={handleChange} name="description" value={data.description} />
                             </Flex>
                             <Flex gap='15px'>
                                 <Flex direction={'column'}>
+<<<<<<< HEAD
                                     <FormLabel fontWeight="bold">Giá</FormLabel>
                                     <Input onChange={handleChange} name="price" value={data.price} />
                                 </Flex>
                                 <Flex direction={'column'}>
                                     <FormLabel fontWeight="bold">Thương hiệu</FormLabel>
+=======
+                                    <FormLabel fontWeight="bold">price</FormLabel>
+                                    <Input onChange={handleChange} name="price" value={data.price} />
+                                </Flex>
+                                <Flex direction={'column'}>
+                                    <FormLabel fontWeight="bold">brand</FormLabel>
+>>>>>>> Suong
                                     <Input onChange={handleChange} name="brand" value={data.brand} />
                                 </Flex>
                             </Flex>
@@ -111,12 +139,20 @@ function EditProduct({ id , children }) {
                     <ModalFooter>
                         <Flex justifyContent={'flex-end'} w='100%'>
                             <Button varient='unstyled' mr={3} onClick={onClose}>
+<<<<<<< HEAD
                                 Hủy
+=======
+                                cancel
+>>>>>>> Suong
                             </Button>
                             <Button  onClick={(e)=>{                            
                             handleEdit(e)
                             onClose()
+<<<<<<< HEAD
                             }}  varient='outline'>Cập nhật</Button>
+=======
+                            }}  varient='outline'>update</Button>
+>>>>>>> Suong
                         </Flex>
                     </ModalFooter>
                 </ModalContent>

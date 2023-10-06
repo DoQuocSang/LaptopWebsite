@@ -20,8 +20,13 @@ const PaymentDetail = () => {
           e.preventDefault()
           if(!card || !name || !expiry || !security){
             toast({
+<<<<<<< HEAD
                 title: 'Vui điền thông tin thẻ',
                 description: "Thông tin không được để trống",
+=======
+                title: 'ohh no',
+                description: "All fields are required.",
+>>>>>>> Suong
                 status: 'error',
                 duration: 2000,
                 position: 'top',
@@ -32,8 +37,13 @@ const PaymentDetail = () => {
           
           if(card.length !== 16){
             toast({
+<<<<<<< HEAD
                 title: 'Xin lỗi!',
                 description: "Thẻ phải có 16 chữ số",
+=======
+                title: 'sorry',
+                description: "card number must have 16 digits",
+>>>>>>> Suong
                 status: 'warning',
                 duration: 2000,
                 position: 'top',
@@ -59,20 +69,36 @@ const PaymentDetail = () => {
            <Box p={{base:'20px',sm:'30px' ,md:'10px',lg:'100px'}}  boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}>
            <form style={{display:'flex',flexDirection:'column',rowGap:'20px',margin:'auto'}}>
                 <FormControl>
+<<<<<<< HEAD
                     <FormLabel>Số thẻ</FormLabel>
                     <Input onChange={(e)=>{setCard(e.target.value)}} type='number' placeholder='1234 5678 9012 3456' />
                 </FormControl>
                 <FormControl>
                     <FormLabel>Tên thẻ</FormLabel>
+=======
+                    <FormLabel>Card Number</FormLabel>
+                    <Input onChange={(e)=>{setCard(e.target.value)}} type='number' placeholder='1234 5678 9012 3456' />
+                </FormControl>
+                <FormControl>
+                    <FormLabel>Name on Card</FormLabel>
+>>>>>>> Suong
                     <Input onChange={(e)=>{setName(e.target.value)}} type='text' placeholder='your name' />
                 </FormControl>
                 <Flex>
                     <FormControl>
+<<<<<<< HEAD
                         <FormLabel>Ngày hết hạn</FormLabel>
                         <Input onChange={(e)=>{setExpiry(e.target.value)}} type='number' placeholder='mm yy' />
                     </FormControl>
                     <FormControl>
                         <FormLabel>Mã bảo mật</FormLabel>
+=======
+                        <FormLabel>Expiry Date</FormLabel>
+                        <Input onChange={(e)=>{setExpiry(e.target.value)}} type='number' placeholder='mm yy' />
+                    </FormControl>
+                    <FormControl>
+                        <FormLabel>Security Code</FormLabel>
+>>>>>>> Suong
                         <Input onChange={(e)=>{setSecurity(e.target.value)}} type='number' placeholder='* * *' />
                     </FormControl>
                 </Flex>

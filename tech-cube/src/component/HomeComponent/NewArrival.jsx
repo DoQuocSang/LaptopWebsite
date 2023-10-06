@@ -22,14 +22,22 @@ const NewArrival = () => {
     return (
         <Flex p="3%" gap="50px" direction="column" mt="20px">
             <Center>
+<<<<<<< HEAD
                 <Heading fontSize={{base:'25px',md:'32px'}}>New Arrival</Heading>
+=======
+                <Heading fontSize={{base:'25px',md:'32px'}}>Sản Phẩm Mới</Heading>
+>>>>>>> Suong
             </Center>
             <Grid templateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)', lg: 'repeat(3,1fr)' }} gap="20px">
                 {
                     data.map(el => (
                         <Box boxShadow={"rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"} pos={'relative'}>
                             <Image src={el.image} h='250px' w="100%" />
+<<<<<<< HEAD
                             <NavLink to={`/products/${el.id}`}><Button color="blackAlpha.900" pos={'absolute'} bottom={'10px'} left={'10px'} variant={'outline'} borderRadius={'20px'} border={'1px solid black'} onClick={() => speaker()}>shop now</Button></NavLink>
+=======
+                            <NavLink to={`/products/${el.id}`}><Button color="blackAlpha.900" pos={'absolute'} bottom={'10px'} left={'10px'} variant={'outline'} borderRadius={'20px'} border={'1px solid black'} onClick={() => speaker()}>mua ngay</Button></NavLink>
+>>>>>>> Suong
                         </Box>
                     ))
                 }

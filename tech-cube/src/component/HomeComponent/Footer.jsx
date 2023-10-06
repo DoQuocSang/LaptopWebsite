@@ -17,12 +17,18 @@ export default function Footer() {
           templateColumns={{ sm: '1fr 1fr', md: '1fr 1fr 1fr 1.5fr' }}
           spacing={2} py={18}>
           <Stack spacing={2}>
+<<<<<<< HEAD
             <Text fontSize={16} fontWeight="bolder">KNOW US</Text>
             <Link fontSize={14}>About Tech-Cube</Link>
+=======
+            <Text fontSize={16} fontWeight="bolder">TÌM HIỂU VỀ CHÚNG TÔI</Text>
+            <Link fontSize={14}>Giới thiệu về Tech-Cube</Link>
+>>>>>>> Suong
             <Link fontSize={14}>Blogs</Link>
          
           </Stack>
           <Stack align={'flex-start'}>
+<<<<<<< HEAD
             <Text fontSize={16} fontWeight="bolder">HELPDESK</Text>
             <Text fontSize={14}>Terms Of Use</Text>
             <Text fontSize={14}>Warranty Policy</Text>
@@ -35,13 +41,31 @@ export default function Footer() {
             <Text fontSize={16} fontWeight="bolder">NETWORK</Text>
             <Text fontSize={14}>Contact Us</Text>
             <Text fontSize={14}>Corporate Gifting</Text>
+=======
+            <Text fontSize={16} fontWeight="bolder">HỖ TRỢ</Text>
+            <Text fontSize={14}>Điều Khoản Sử Dụng</Text>
+            <Text fontSize={14}>Chính Sách Bảo Hành</Text>
+            <Text fontSize={14}>Chính Sách Vận chuyển</Text>
+            <Text fontSize={14}>Chính Sách Hủy Đơn</Text>
+            <Text fontSize={14}>Chính Sách Đổi Trả</Text>
+            <Text fontSize={14}>Riêng Tử Và Bảo Mật</Text>
+          </Stack>
+          <Stack align={'flex-start'}>
+            <Text fontSize={16} fontWeight="bolder">Hệ Thống</Text>
+            <Text fontSize={14}>Liên Hệ Với Chúng Tôi</Text>
+            <Text fontSize={14}>Quà tặng doanh nghiệp</Text>
+>>>>>>> Suong
 
           </Stack>
           <Stack align={'flex-start'} borderLeft="1px solid lightgray" spacing={10}>
             
             <Stack direction={'column'} pl={5}>
               {/* forth orbit ========================= */}
+<<<<<<< HEAD
             <Text fontSize={25} fontWeight={'bolder'}>FOLLOW US ON</Text>
+=======
+            <Text fontSize={25} fontWeight={'bolder'}>THEO DÕI CHÚNG TÔI TẠI</Text>
+>>>>>>> Suong
             <Divider ></Divider>
             <HStack>
               <Link><IconButton borderRadius={'50%'} border={text === 'dark' ? "2px solid white" : "2px solid black"} variant={'outline'} color={textColor}  icon={<FaInstagram />} /></Link>
@@ -55,7 +79,11 @@ export default function Footer() {
             <Divider border={'1px solid lightgray'} w="100%"/>
             <Stack direction={'column'} pl={5}>
               {/* forth orbit ========================= */}
+<<<<<<< HEAD
               <Text fontSize={25} fontWeight={'bolder'} >DOWNLOAD OUR APP</Text>
+=======
+              <Text fontSize={25} fontWeight={'bolder'} >Tải APP</Text>
+>>>>>>> Suong
               <HStack spacing={7}>
                 <Link><Image src="https://images.dailyobjects.com/marche/icons/android.png?tr=cm-pad_resize,v-2,w-118,h-38,dpr-1" /></Link>
                 <Link><Image src="https://images.dailyobjects.com/marche/icons/IOS.png?tr=cm-pad_resize,v-2,w-118,h-38,dpr-1" /></Link>
@@ -68,7 +96,11 @@ export default function Footer() {
     <Box w={'100%'}>
        <Center>
         <Stack direction={'column'}  py={50}>
+<<<<<<< HEAD
          <Center><Text fontSize={16}>100% SECURE PAYMENT</Text></Center>
+=======
+         <Center><Text fontSize={16}>THANH TOÁN AN TOÀN 100%</Text></Center>
+>>>>>>> Suong
             <Grid direction={{base:'column', md:'row'}} templateColumns={{base:'repeat(3,1fr)',md:'repeat(8,1fr)'}} gap={'15px'} p="15px">
                <Image src="https://images.dailyobjects.com/marche/icons/payments/amex-update.png?tr=cm-pad_resize,v-2,dpr-1"  w={{base:'100%',md:'80px'}}/>
                <Image src="https://images.dailyobjects.com/marche/icons/payments/maestro-update.png?tr=cm-pad_resize,v-2,dpr-1" w={{base:'100%',md:'80px'}} />

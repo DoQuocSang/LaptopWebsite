@@ -3,7 +3,11 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 
 export const NAV_ITEMS = [
     {
+<<<<<<< HEAD
         label: 'Danh mục sản phẩm',
+=======
+        label: 'All category',
+>>>>>>> Suong
         children: [
             {
                 image: 'https://cdn.shopify.com/s/files/1/0057/8938/4802/products/boat-bassheads-102-red_600x.png?v=1633152280',
@@ -38,6 +42,7 @@ export const NAV_ITEMS = [
         ],
     },
     {
+<<<<<<< HEAD
         label: 'Phụ kiện',
         href:'/products'
     },
@@ -47,6 +52,17 @@ export const NAV_ITEMS = [
     },
     {
         label: 'Thiết bị điện tử',
+=======
+        label: 'Accessories',
+        href:'/products'
+    },
+    {
+        label: 'Tv & Watches',
+        href:'/products'
+    },
+    {
+        label: 'Electronics',
+>>>>>>> Suong
         href:'/products'
     },
 ];

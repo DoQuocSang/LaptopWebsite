@@ -57,7 +57,11 @@ const Users = () => {
     return (
         <Flex direction={'column'} bg='white' borderRadius={'10px'}>
             <Flex justify={'flex-end'} px={{ base: '7px', md: '20px', lg: '50px' }} alignItems={'center'} py="15px">
+<<<<<<< HEAD
                 <Text fontSize={'20px'} fontWeight={'bolder'}>Tống số user - {user.length}</Text>
+=======
+                <Text fontSize={'20px'} fontWeight={'bolder'}>Total users - {user.length}</Text>
+>>>>>>> Suong
             </Flex>
             <Box w="98%" h={{ base: "100vh", md: '100vh', lg: '450px' }} direction={'column'} overflowY={'scroll'} >
 
@@ -69,7 +73,11 @@ const Users = () => {
                                 <Text>{`${el.firstName} ${el.lastName}`}</Text>
                                 <Box display={{ base: 'block', md: 'none' }}>
 
+<<<<<<< HEAD
                                     <ShowDetail child={el} fun={fun}>Thông tin chi tiết</ShowDetail>
+=======
+                                    <ShowDetail child={el} fun={fun}>show details</ShowDetail>
+>>>>>>> Suong
             
 
                                 </Box>

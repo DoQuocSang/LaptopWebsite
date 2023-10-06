@@ -93,8 +93,13 @@ const MobileNav = ({ onOpen, ...rest }) => {
   const adminAuth = () => {
     localStorage.setItem('adminAuth',JSON.stringify(false))
     toast({
+<<<<<<< HEAD
       title: 'Đã đăng xuất',
       description: "Chuyển hướng đến trang đăng nhập",
+=======
+      title: 'successfully logOut',
+      description: "Redirecting to login page",
+>>>>>>> Suong
       status: 'success',
       duration: 2000,
       isClosable: true,
@@ -124,7 +129,11 @@ const MobileNav = ({ onOpen, ...rest }) => {
         icon={<FiMenu />}
       />
        <Flex display={{base:'none',md:'none',lg:'block'}}>
+<<<<<<< HEAD
        <Input w="300px" placeholder='Tìm kiếm' color="white" variant={'outline'}/>
+=======
+       <Input w="300px" placeholder='search' color="white" variant={'outline'}/>
+>>>>>>> Suong
        </Flex> 
       <Text
         display={{ base: 'flex', md: 'block' ,lg:'none'}}
@@ -169,10 +178,17 @@ const MobileNav = ({ onOpen, ...rest }) => {
             <MenuList>
               <MenuItem>
                 <UserProfile data={adminProfile}>
+<<<<<<< HEAD
                   Profile
                 </UserProfile>
               </MenuItem>
               <MenuItem onClick={adminAuth}>Sign out</MenuItem>
+=======
+                  Hồ sơ
+                </UserProfile>
+              </MenuItem>
+              <MenuItem onClick={adminAuth}>Đăng xuất</MenuItem>
+>>>>>>> Suong
             </MenuList>
           </Menu>
         </Flex>
