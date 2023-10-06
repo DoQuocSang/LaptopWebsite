@@ -147,7 +147,7 @@ const Login = () => {
       >
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Stack align={'center'}>
-            <Heading fontSize={'4xl'}>Đăng nhập</Heading>
+            <Heading fontSize={'4xl'} textAlign={'center'}>Đăng nhập bằng tài khoản của bạn</Heading>
           </Stack>
           <Box rounded={'lg'} boxShadow={'lg'} p={8}>
             <form onSubmit={handleSubmit}>
@@ -175,7 +175,7 @@ const Login = () => {
                     align={'start'}
                     justify={'space-between'}
                   >
-                    <Checkbox>nhớ</Checkbox>
+                    <Checkbox>Nhớ tài khoản</Checkbox>
                     <Link color={'blue.400'}>Quên mật khẩu?</Link>
                   </Stack>
                   <Button
@@ -192,7 +192,7 @@ const Login = () => {
               </Stack>
             </form>
             <Flex w="90%" mt="20px" justifyContent="center">
-              <Text>Thêm?</Text>
+              <Text>Chưa có tài khoản?</Text>
               <NavLink
                 style={{
                   marginLeft: '10px',

@@ -94,7 +94,8 @@ export default function SignUp() {
       return;
     }
 
-    if (mobile.toString().length !== 10) {
+    if (mobile.toString().length !== 9) {
+      console.log(mobile.toString())
       toast({
         title: 'Đã xảy ra lỗi!',
         description: 'Vui lòng kiểm tra lại các ô nhập liệu',

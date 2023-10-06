@@ -75,7 +75,7 @@ const NewRight = ({ spData }) => {
             <Text fontSize={'xl'} display={'flex'} >
               Giá:
               <Text paddingLeft={'5px'} fontWeight={'semibold'} textDecoration={'line-through'}>
-              {toThousandFormat(calculateDiscountedPrice(spData.price, spData.discount))}
+                {toThousandFormat(spData.price)} VNĐ
               </Text>
             </Text>
           </Box>
@@ -103,7 +103,7 @@ const NewRight = ({ spData }) => {
         <Box fontWeight={'5px'}>
           <Heading display={'flex'} color={'#ff5757'}>
             <Heading paddingRight={'2px'}></Heading>
-            {toThousandFormat(spData.price)} VNĐ
+            {toThousandFormat(calculateDiscountedPrice(spData.price, spData.discount))}
           </Heading>
         </Box>
       </Box>

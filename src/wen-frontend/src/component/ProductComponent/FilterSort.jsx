@@ -196,7 +196,7 @@ export const FilterSort = () => {
             >
               <MenuItemOption value="ONEPLUS">
                 <Checkbox value="ONEPLUS" isChecked={brand.includes('ONEPLUS')}>
-                  One plus
+                  14 inch
                 </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="Realme Tvs">
@@ -204,7 +204,7 @@ export const FilterSort = () => {
                   value="Realme Tvs"
                   isChecked={brand.includes('Realme Tvs')}
                 >
-                  Realme Tvs
+                15 inch
                 </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="MI REDMI">
@@ -212,7 +212,15 @@ export const FilterSort = () => {
                   value="MI REDMI"
                   isChecked={brand.includes('MI REDMI')}
                 >
-                  MI Redmi
+                16 inch
+                </Checkbox>
+              </MenuItemOption>
+              <MenuItemOption value="MI REDMI">
+                <Checkbox
+                  value="MI REDMI"
+                  isChecked={brand.includes('MI REDMI')}
+                >
+                17 inch
                 </Checkbox>
               </MenuItemOption>
             </Flex>
@@ -238,7 +246,7 @@ export const FilterSort = () => {
                   value="wireless_earbuds"
                   isChecked={category.includes('wireless_earbuds')}
                 >
-                  Wireless Earbuds
+                  4 GB
                 </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="wireless_earphones">
@@ -246,8 +254,7 @@ export const FilterSort = () => {
                   value="wireless_earphones"
                   isChecked={category.includes('wireless_earphones')}
                 >
-                  {' '}
-                  Wireless Earphones
+                  8 GB
                 </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="earphones">
@@ -255,7 +262,7 @@ export const FilterSort = () => {
                   value="earphones"
                   isChecked={category.includes('earphones')}
                 >
-                  Earphones
+                  16 GB
                 </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="wireless_speakers">
@@ -263,8 +270,7 @@ export const FilterSort = () => {
                   value="wireless_speakers"
                   isChecked={category.includes('wireless_speakers')}
                 >
-                  {' '}
-                  Wireless Speakers
+                  32 GB
                 </Checkbox>
               </MenuItemOption>
             </Flex>
@@ -290,8 +296,7 @@ export const FilterSort = () => {
                   value="smart_watches"
                   isChecked={category.includes('smart_watches')}
                 >
-                  {' '}
-                  Smart Watch
+                  Ryzen
                 </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="power_bank">
@@ -299,7 +304,7 @@ export const FilterSort = () => {
                   value="power_bank"
                   isChecked={category.includes('power_bank')}
                 >
-                  Power Bank
+                  Intel
                 </Checkbox>
               </MenuItemOption>
             </Flex>
@@ -325,8 +330,7 @@ export const FilterSort = () => {
                   value="smart_watches"
                   isChecked={category.includes('smart_watches')}
                 >
-                  {' '}
-                  Smart Watch
+                  SSD
                 </Checkbox>
               </MenuItemOption>
               <MenuItemOption value="power_bank">
@@ -334,7 +338,7 @@ export const FilterSort = () => {
                   value="power_bank"
                   isChecked={category.includes('power_bank')}
                 >
-                  Power Bank
+                  HDD
                 </Checkbox>
               </MenuItemOption>
             </Flex>

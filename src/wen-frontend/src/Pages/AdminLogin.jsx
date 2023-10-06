@@ -115,8 +115,8 @@ const AdminLogin = () => {
         py={12}
         px={{ base: 2, md: 6 }}
       >
-        <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Đăng nhập Admin</Heading>
+        <Stack align={'center'} textAlign={'center'}>
+          <Heading fontSize={'4xl'}>Đăng nhập vào hệ thống quản trị</Heading>
         </Stack>
         <Box
           rounded={'lg'}
