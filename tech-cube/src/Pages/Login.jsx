@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import {
   Flex,
@@ -19,7 +18,11 @@ import {
 import loginImg from '../Assets/loginImg.avif';
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { LOGIN_USER, LOGIN_USER_FAILURE, LOGIN_USER_SUCCESSFUL } from '../redux/Authentication/actionType';
+import {
+  LOGIN_USER,
+  LOGIN_USER_FAILURE,
+  LOGIN_USER_SUCCESSFUL,
+} from '../redux/Authentication/actionType';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { loginData } from '../redux/Authentication/action';
 import Loader from '../component/Loader&Error/Loader';
@@ -35,45 +38,50 @@ const Login = () => {
   // const data = useSelector(store => store.authReducer.users);
   const navigate = useNavigate();
 
-  useEffect(()=>{
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-  },[])
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
 
-    let data = await axios('https://viridian-confusion-henley.glitch.me/user').then(res => res.data);
+    let data = await axios(
+      'https://viridian-confusion-henley.glitch.me/user'
+    ).then(res => res.data);
 
     let block = false;
-    const blockData = await axios.get('https://viridian-confusion-henley.glitch.me/blacklist').then(res => res.data)
+    const blockData = await axios
+      .get('https://viridian-confusion-henley.glitch.me/blacklist')
+      .then(res => res.data);
     if (blockData.length > 0) {
       blockData.forEach(el => {
         if (el.email === email) {
           block = true;
         }
-      })
+      });
     }
-    if(block){
+    if (block) {
       toast({
-        title: 'sorry',
-        description: "this email id has been blacklisted, you can not use this email",
+        title: 'Xin lỗi!',
+        description:
+          'Email của bạn đã bị đưa vào danh sách đen, bạn không thể sử dụng email này.',
         status: 'warning',
         duration: 5000,
         position: 'top',
         isClosable: true,
-      })
+      });
       return;
     }
 
     if (!email || !password) {
       toast({
-        title: 'failed',
-        description: "all filled are required",
+        title: 'Lỗi!',
+        description: 'Vui lòng điền đầy đủ thông tin.',
         status: 'error',
         duration: 3000,
         isClosable: true,
-        position: 'top'
-      })
+        position: 'top',
+      });
       return;
     }
     const newData = data.find(el => el.email === email);
@@ -81,132 +89,146 @@ const Login = () => {
     if (newData) {
       if (newData.password === password) {
         toast({
-          title: 'Log in Successful.',
-          description: "Redirecting to Home Page.",
+          title: 'Đăng nhập thành công',
+          description: 'Đang chuyển hướng đến trang chủ...',
           status: 'success',
           duration: 3000,
           isClosable: true,
-          position: 'top'
-        })
-        localStorage.setItem('userId', JSON.stringify(newData.id))
+          position: 'top',
+        });
+        localStorage.setItem('userId', JSON.stringify(newData.id));
         localStorage.setItem('auth', JSON.stringify(true));
         localStorage.setItem('user', JSON.stringify(newData));
         setTimeout(() => {
           navigate('/');
-        }, 3000)
+        }, 3000);
         return;
       } else {
         toast({
-          title: 'Login Failed!!',
-          description: "Password didn't match",
+          title: 'Đăng nhập thất bại!',
+          description: 'Mật khẩu không chính xác.',
           status: 'warning',
           duration: 3000,
           isClosable: true,
-          position: 'top'
-        })
+          position: 'top',
+        });
         return;
       }
     } else {
       toast({
-        title: 'Wrong credentials',
-        description: "Make Sure you are registered.",
+        title: 'Lỗi xác thực!',
+        description: 'Vui lòng đăng ký tài khoản để tiếp tục.',
         status: 'error',
         duration: 3000,
         isClosable: true,
-        position: 'top'
-      })
+        position: 'top',
+      });
       return;
     }
+  };
 
-  }
-
-
-  return (
-    loader ? <Loader /> :
+  return loader ? (
+    <Loader />
+  ) : (
     <>
       <Flex
         minH={'100vh'}
         align={'center'}
         pt={'60px'}
         justify={'center'}
-        direction={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row', '2xl': 'row' }}>
+        direction={{
+          base: 'column',
+          sm: 'column',
+          md: 'column',
+          lg: 'row',
+          xl: 'row',
+          '2xl': 'row',
+        }}
+      >
         <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
           <Stack align={'center'}>
-<<<<<<< HEAD
-            <Heading fontSize={'4xl'}>Sign in to your Account</Heading>
-=======
             <Heading fontSize={'4xl'}>Đăng nhập</Heading>
->>>>>>> Suong
           </Stack>
-          <Box
-            rounded={'lg'}
-            boxShadow={'lg'}
-            p={8}>
+          <Box rounded={'lg'} boxShadow={'lg'} p={8}>
             <form onSubmit={handleSubmit}>
               <Stack spacing={4}>
                 <FormControl id="email">
-<<<<<<< HEAD
-                  <FormLabel>Email address</FormLabel>
-                  <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-                </FormControl>
-                <FormControl id="password">
-                  <FormLabel>Password</FormLabel>
-=======
                   <FormLabel>Email</FormLabel>
-                  <Input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  <Input
+                    type="email"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                  />
                 </FormControl>
                 <FormControl id="password">
                   <FormLabel>Mật khẩu</FormLabel>
->>>>>>> Suong
-                  <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+
+                  <Input
+                    type="password"
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
+                  />
                 </FormControl>
                 <Stack spacing={10}>
                   <Stack
                     direction={{ base: 'column', sm: 'row' }}
                     align={'start'}
-                    justify={'space-between'}>
-<<<<<<< HEAD
-                    <Checkbox>Remember me</Checkbox>
-                    <Link color={'blue.400'}>Forgot password?</Link>
-=======
+                    justify={'space-between'}
+                  >
                     <Checkbox>nhớ</Checkbox>
                     <Link color={'blue.400'}>Quên mật khẩu?</Link>
->>>>>>> Suong
                   </Stack>
                   <Button
                     bg={'black'}
                     color={'white'}
-                    type='submit'
+                    type="submit"
                     _hover={{
                       bg: 'gray.700',
-                    }}>
-<<<<<<< HEAD
-                    Sign in
-=======
-                   Đăng nhập
->>>>>>> Suong
+                    }}
+                  >
+                    Đăng nhập
                   </Button>
                 </Stack>
               </Stack>
             </form>
-            <Flex w='90%' mt='20px' justifyContent='center'>
-<<<<<<< HEAD
-              <Text>New here?</Text>
-              <NavLink style={{ marginLeft: '10px', color: '#4299e1', textDecoration: 'underline' }} to='/signup'>Sign Up</NavLink>
-=======
+            <Flex w="90%" mt="20px" justifyContent="center">
               <Text>Thêm?</Text>
-              <NavLink style={{ marginLeft: '10px', color: '#4299e1', textDecoration: 'underline' }} to='/signup'>Đăng ký</NavLink>
->>>>>>> Suong
+              <NavLink
+                style={{
+                  marginLeft: '10px',
+                  color: '#4299e1',
+                  textDecoration: 'underline',
+                }}
+                to="/signup"
+              >
+                Đăng ký
+              </NavLink>
             </Flex>
           </Box>
         </Stack>
-        <Box m={'20px auto'} w={{ base: '90%', sm: '75%', md: '75%', lg: '50%', xl: '50%', '2xl': '50%' }}>
-          <Image w={'95%'} borderRadius={'10px'} h={'500px'} src={loginImg} alt='loginImg' />
+        <Box
+          m={'20px auto'}
+          w={{
+            base: '90%',
+            sm: '75%',
+            md: '75%',
+            lg: '50%',
+            xl: '50%',
+            '2xl': '50%',
+          }}
+        >
+          <Image
+            w={'95%'}
+            borderRadius={'10px'}
+            h={'500px'}
+            src={loginImg}
+            alt="loginImg"
+          />
         </Box>
       </Flex>
       <Footer />
-      </>
-  )
-}
+    </>
+  );
+};
 
 export default Login;

@@ -33,7 +33,7 @@ const Dashboard = () => {
 `} >
       <Flex justifyContent={{ base: 'center', md: 'flex-start' }} gap={{base:'10px',md:'50px'}} direction={{ base: 'column', md: 'row' }} alignItems={'center'}>
         <Flex gap ={{base:'60px',md:'5px'}} alignItems={'center'} justifyContent={'center'} h='120px' w={{ base: '90%', md: '200px' }} bg='orange.400' direction={{ base: 'row', md: 'column' }} color={'white'} borderRadius={'40px'} >
-<<<<<<< HEAD
+
           <Heading fontSize={'25px'}>Số lượng user</Heading>
           <Heading fontSize={'25px'}>{user}</Heading>
         </Flex>
@@ -43,17 +43,7 @@ const Dashboard = () => {
         </Flex>
         <Flex gap ={{base:'60px',md:'5px'}} alignItems={'center'} justifyContent={'center'} h='120px' w={{ base: '90%', md: '200px' }} bg='blackAlpha.900' direction={{ base: 'row', md: 'column' }} color={'white'} borderRadius={'40px'} >
           <Heading fontSize={'25px'}>Đã bán</Heading>
-=======
-          <Heading fontSize={'25px'}>Total User</Heading>
-          <Heading fontSize={'25px'}>{user}</Heading>
-        </Flex>
-        <Flex gap ={{base:'60px',md:'5px'}} alignItems={'center'} justifyContent={'center'} h='120px' w={{ base: '90%', md: '200px' }} bg='green.400' direction={{ base: 'row', md: 'column' }} color={'white'} borderRadius={'40px'} >
-          <Heading fontSize={'25px'}>Total Product</Heading>
-          <Heading fontSize={'25px'}>{count}</Heading>
-        </Flex>
-        <Flex gap ={{base:'60px',md:'5px'}} alignItems={'center'} justifyContent={'center'} h='120px' w={{ base: '90%', md: '200px' }} bg='blackAlpha.900' direction={{ base: 'row', md: 'column' }} color={'white'} borderRadius={'40px'} >
-          <Heading fontSize={'25px'}>Total Sale</Heading>
->>>>>>> Suong
+
           <Heading fontSize={'25px'}>0</Heading>
         </Flex>
       </Flex>

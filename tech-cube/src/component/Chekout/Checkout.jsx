@@ -16,35 +16,12 @@ import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function Copyright() {
-
-  
-
-
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-<<<<<<< HEAD
-        Your Website
-=======
         Trang của bạn
->>>>>>> Suong
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -55,11 +32,9 @@ function Copyright() {
 const steps = ['Shipping address', 'Payment details', 'Review your order'];
 
 function getStepContent(step) {
-  
-  
   switch (step) {
     case 0:
-      return <AddressForm  />;
+      return <AddressForm />;
     case 1:
       return <PaymentForm />;
     case 2:
@@ -72,8 +47,6 @@ function getStepContent(step) {
 const theme = createTheme();
 
 export default function Checkout() {
-  
-
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
@@ -93,30 +66,25 @@ export default function Checkout() {
         elevation={0}
         sx={{
           position: 'relative',
-          borderBottom: (t) => `1px solid ${t.palette.divider}`,
+          borderBottom: t => `1px solid ${t.palette.divider}`,
         }}
       >
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-<<<<<<< HEAD
-            Company name
-=======
             Tên công ty
->>>>>>> Suong
           </Typography>
         </Toolbar>
       </AppBar>
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
-        <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
+        <Paper
+          variant="outlined"
+          sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}
+        >
           <Typography component="h1" variant="h4" align="center">
-<<<<<<< HEAD
-            Checkout
-=======
             Thanh toán
->>>>>>> Suong
           </Typography>
           <Stepper activeStep={activeStep} sx={{ pt: 3, pb: 5 }}>
-            {steps.map((label) => (
+            {steps.map(label => (
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>
               </Step>
@@ -125,21 +93,12 @@ export default function Checkout() {
           {activeStep === steps.length ? (
             <React.Fragment>
               <Typography variant="h5" gutterBottom>
-<<<<<<< HEAD
-                Thank you for your order.
-              </Typography>
-              <Typography variant="subtitle1">
-                Your order number is #2001539. We have emailed your order
-                confirmation, and will send you an update when your order has
-                shipped.
-=======
                 Cảm ơn bạn đã đặt hàng
               </Typography>
               <Typography variant="subtitle1">
-              Mã đơn hàng của bạn là #2001539. Chúng tôi đã gửi email đơn đặt hàng của bạn
-              xác nhận và sẽ gửi cho bạn thông tin cập nhật khi đơn đặt hàng của bạn có
-              được vận chuyển.
->>>>>>> Suong
+                Mã đơn hàng của bạn là #2001539. Chúng tôi đã gửi email đơn đặt
+                hàng của bạn xác nhận và sẽ gửi cho bạn thông tin cập nhật khi
+                đơn đặt hàng của bạn có được vận chuyển.
               </Typography>
             </React.Fragment>
           ) : (
@@ -148,11 +107,7 @@ export default function Checkout() {
               <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                 {activeStep !== 0 && (
                   <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
-<<<<<<< HEAD
-                    Back
-=======
                     Trở lại
->>>>>>> Suong
                   </Button>
                 )}
 

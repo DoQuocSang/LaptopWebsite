@@ -6,67 +6,39 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import { Button } from '@chakra-ui/react';
 
-
-
-
-
-
-
-
-
-
-
-
 export default function AddressForm() {
+  const [firstName, setFirstName] = React.useState('');
+  const [lastName, setLastName] = React.useState('');
+  const [state, setState] = React.useState('');
+  const [city, setCity] = React.useState('');
+  const [country, setCountry] = React.useState('');
+  const [zip, setZip] = React.useState('');
+  const [phone, setPhone] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [address, setAddress] = React.useState('');
+  const [address2, setAddress2] = React.useState('');
 
-const [firstName, setFirstName]=React.useState('');
-const [lastName, setLastName]=React.useState('');
-const [state,setState]=React.useState('');
-const [city, setCity]=React.useState('');
-const [country, setCountry]=React.useState('');
-const [zip, setZip]=React.useState('');
-const [phone, setPhone]=React.useState('');
-const [email, setEmail]=React.useState('');
-const [address, setAddress]=React.useState('');
-const [address2, setAddress2]=React.useState('');
+  const userDetails = {
+    firstName,
+    lastName,
+    state,
+    city,
+    country,
+    zip,
+    phone,
+    email,
+    address,
+    address2,
+  };
 
+  const handleSubmit = () => {};
 
-
-const userDetails = {
-  firstName,
-  lastName,
-  state,
-  city,
-  country,
-  zip,
-  phone,
-  email,
-  address,
-  address2,
-}
-
-
-const handleSubmit=()=>{
-
-  
-}
-
-
-
-
-
-
-
-// console.log("stateChekker",state)
+  // console.log("stateChekker",state)
 
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-<<<<<<< HEAD
-        Shipping address
-=======
         Địa chỉ thanh toán
->>>>>>> Suong
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
@@ -78,9 +50,7 @@ const handleSubmit=()=>{
             fullWidth
             autoComplete="given-name"
             variant="standard"
-
-            onChange={(e) => setFirstName(e.target.value)}
-
+            onChange={e => setFirstName(e.target.value)}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -92,7 +62,7 @@ const handleSubmit=()=>{
             fullWidth
             autoComplete="family-name"
             variant="standard"
-            onChange={(e) => setLastName(e.target.value) }
+            onChange={e => setLastName(e.target.value)}
           />
         </Grid>
         <Grid item xs={12}>
@@ -104,7 +74,7 @@ const handleSubmit=()=>{
             fullWidth
             autoComplete="shipping address-line1"
             variant="standard"
-            onChange={(e) =>setAddress(e.target.value)}
+            onChange={e => setAddress(e.target.value)}
           />
         </Grid>
         <Grid item xs={12}>
@@ -115,7 +85,7 @@ const handleSubmit=()=>{
             fullWidth
             autoComplete="shipping address-line2"
             variant="standard"
-            onChange={(e) => setAddress2(e.target.value)}
+            onChange={e => setAddress2(e.target.value)}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -127,7 +97,7 @@ const handleSubmit=()=>{
             fullWidth
             autoComplete="shipping address-level2"
             variant="standard"
-            onChange={(e) =>setCity(e.target.value) }
+            onChange={e => setCity(e.target.value)}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -137,7 +107,7 @@ const handleSubmit=()=>{
             label="State/Province/Region"
             fullWidth
             variant="standard"
-            onChange={(e) => setState(e.target.value)}
+            onChange={e => setState(e.target.value)}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -149,7 +119,7 @@ const handleSubmit=()=>{
             fullWidth
             autoComplete="shipping postal-code"
             variant="standard"
-            onChange={(e) => setZip(e.target.value)}
+            onChange={e => setZip(e.target.value)}
           />
         </Grid>
         <Grid item xs={12} sm={6}>
@@ -161,50 +131,46 @@ const handleSubmit=()=>{
             fullWidth
             autoComplete="shipping country"
             variant="standard"
-            onChange={(e) => setCountry(e.target.value)}
+            onChange={e => setCountry(e.target.value)}
           />
         </Grid>
 
-      <Grid item xs={12} sm={6}>
-        <TextField
-          required
-          id="phone"
-          name="phone"
-          label="Phone number"
-          fullWidth
-          variant="standard"
-          type={'number'}
-        
-          onChange={(e) => setPhone(e.target.value) }
-        />
-      </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            id="phone"
+            name="phone"
+            label="Phone number"
+            fullWidth
+            variant="standard"
+            type={'number'}
+            onChange={e => setPhone(e.target.value)}
+          />
+        </Grid>
 
-      <Grid item xs={12} sm={6}>
-        <TextField
-          required
-          id="email"
-          name="email"
-          label="Email address"
-          fullWidth
-          variant="standard"
-          type={'email'}
-          onChange={(e) =>setEmail(e.target.value) }
-        />
-      </Grid>
+        <Grid item xs={12} sm={6}>
+          <TextField
+            required
+            id="email"
+            name="email"
+            label="Email address"
+            fullWidth
+            variant="standard"
+            type={'email'}
+            onChange={e => setEmail(e.target.value)}
+          />
+        </Grid>
 
         <Grid item xs={12}>
           <FormControlLabel
-            control={<Checkbox color="secondary" name="saveAddress" value="yes" />}
+            control={
+              <Checkbox color="secondary" name="saveAddress" value="yes" />
+            }
             label="Use this address for payment details"
           />
         </Grid>
 
-<<<<<<< HEAD
-    <Button onSubmit={handleSubmit}>Save</Button>
-=======
-    <Button onSubmit={handleSubmit}>Lưu</Button>
->>>>>>> Suong
-
+        <Button onSubmit={handleSubmit}>Lưu</Button>
       </Grid>
     </React.Fragment>
   );

@@ -41,14 +41,10 @@ export default function Review() {
   return (
     <React.Fragment>
       <Typography variant="h6" gutterBottom>
-<<<<<<< HEAD
-        Order summary
-=======
         Danh sách
->>>>>>> Suong
       </Typography>
       <List disablePadding>
-        {products.map((product) => (
+        {products.map(product => (
           <ListItem key={product.name} sx={{ py: 1, px: 0 }}>
             <ListItemText primary={product.name} secondary={product.desc} />
             <Typography variant="body2">{product.price}</Typography>
@@ -65,25 +61,17 @@ export default function Review() {
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-<<<<<<< HEAD
-            Shipping
-=======
             Vận chuyển
->>>>>>> Suong
           </Typography>
           <Typography gutterBottom>John Smith</Typography>
           <Typography gutterBottom>{addresses.join(', ')}</Typography>
         </Grid>
         <Grid item container direction="column" xs={12} sm={6}>
           <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-<<<<<<< HEAD
-            Payment details
-=======
             Hình thức thanh toán
->>>>>>> Suong
           </Typography>
           <Grid container>
-            {payments.map((payment) => (
+            {payments.map(payment => (
               <React.Fragment key={payment.name}>
                 <Grid item xs={6}>
                   <Typography gutterBottom>{payment.name}</Typography>

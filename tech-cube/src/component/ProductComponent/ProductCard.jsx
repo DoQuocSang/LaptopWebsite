@@ -1,4 +1,3 @@
-
 import React, { useContext, useState } from 'react';
 import {
   Stack,
@@ -33,20 +32,17 @@ export const ProductCard = ({
   const toast = useToast();
   const products = useSelector(store => store.productReducer.products);
   const [state, setState] = useState(false);
-  const {setStatus} = useContext(SearchContext);
+  const { setStatus } = useContext(SearchContext);
 
   const handleAdd = () => {
     let d = products.find(el => el.id === id);
     // console.log(d);
-    dispatch(postSingleProductItem({...d, quantity : 1})).then(res => {
+    dispatch(postSingleProductItem({ ...d, quantity: 1 })).then(res => {
       dispatch(getCartServerdata());
       toast({
         title: 'Yay!!',
-<<<<<<< HEAD
         description: 'Đã thêm vào giỏ hàng',
-=======
-        description: 'Item added successfully',
->>>>>>> Suong
+
         status: 'success',
         duration: 4000,
         position: 'top',
@@ -131,11 +127,7 @@ export const ProductCard = ({
             }}
             onClick={handleAdd}
           >
-<<<<<<< HEAD
-            Thêm vào giỏ 
-=======
-            Add To Cart
->>>>>>> Suong
+            Thêm vào giỏ
           </Button>
         ) : (
           <Button
@@ -149,14 +141,10 @@ export const ProductCard = ({
             }}
             onClick={() => {
               setStatus(false);
-              navigate('/cart')
+              navigate('/cart');
             }}
           >
-<<<<<<< HEAD
             Đến giỏ hàng
-=======
-            Go To Cart
->>>>>>> Suong
           </Button>
         )}
       </Stack>

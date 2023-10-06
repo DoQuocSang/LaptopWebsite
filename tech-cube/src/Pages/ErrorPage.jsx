@@ -18,11 +18,9 @@ const ErrorPage = () => {
       <Box w={'50%'} m={'80px auto 20px auto'}>
       <Image w={'100%'} src={errorImg} alt='errorImage' />
       <Box textAlign={'center'}>
-<<<<<<< HEAD
-        <Button _hover={'none'} bg={text === 'dark' ? 'black' : 'white'} color={text === 'dark' ? 'white' : 'black'}><Link href={'./'}>Back to Home</Link></Button>
-=======
-        <Button _hover={'none'} bg={text === 'dark' ? 'black' : 'white'} color={text === 'dark' ? 'white' : 'black'}><Link href={'./'}>Trở lại trang Chủ</Link></Button>
->>>>>>> Suong
+
+        <Button _hover={'none'} bg={text === 'dark' ? 'black' : 'white'} color={text === 'dark' ? 'white' : 'black'}><Link href={'./'}>Quay lại trang Chủ</Link></Button>
+
       </Box>
     </Box>
     <Footer />

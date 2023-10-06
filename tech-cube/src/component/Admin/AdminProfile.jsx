@@ -15,11 +15,9 @@ const Admin = () => {
     return (
         <Flex direction={'column'} bg='white' borderRadius={'10px'}>
             <Flex justify={'flex-end'} px={{ base: '7px', md: '20px', lg: '50px' }} alignItems={'center'} py="15px">
-<<<<<<< HEAD
+
                 <Text fontSize={'20px'} fontWeight={'bolder'}>Tài khoản Admin: {admin.length}</Text>
-=======
-                <Text fontSize={'20px'} fontWeight={'bolder'}>Total Admin - {admin.length}</Text>
->>>>>>> Suong
+
             </Flex>
             <Box w="98%" h={{ base: "100vh", md: '100vh', lg: '450px' }} direction={'column'} overflowY={'scroll'} >
 

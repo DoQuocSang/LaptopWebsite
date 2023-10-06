@@ -18,7 +18,7 @@ export const Pagination = ({ totalPage=1, setPage, page=1 }) => {
       gap={'15px'}
     >
       <Button isDisabled={page <= 1} onClick={() => setPage(page - 1)}>
-        Previous
+        Quay lại
       </Button>
 
       {btnArr.map((el, ind) => {
@@ -52,7 +52,7 @@ export const Pagination = ({ totalPage=1, setPage, page=1 }) => {
         {page}
       </Button>
       <Button isDisabled={page === totalPage || products.length === 0} onClick={() => setPage(page + 1)}>
-        Next
+        Tiếp tục
       </Button>
     </Box>
   );

@@ -1,4 +1,3 @@
-
 import {
   Box,
   Flex,
@@ -68,8 +67,6 @@ export default function Navbar() {
   const user = JSON.parse(localStorage.getItem('user')) || {};
   const cartData = useSelector(store => store.cartReducer.cart);
 
-
-
   // let {id} = useRef()
   var id;
 
@@ -82,7 +79,7 @@ export default function Navbar() {
 
   useEffect(() => {
     dispatch(getCartServerdata());
-  }, [])
+  }, []);
 
   const handleSearch = val => {
     // console.log(val)
@@ -93,19 +90,25 @@ export default function Navbar() {
       setStatus(true);
     }
 
-    dispatch({ type: PRODUCT_REQUEST })
+    dispatch({ type: PRODUCT_REQUEST });
 
     axios
-      .get(`https://viridian-confusion-henley.glitch.me/products?q=${val}&_limit=20`)
+      .get(
+        `https://viridian-confusion-henley.glitch.me/products?q=${val}&_limit=20`
+      )
       .then(res => {
-        dispatch({ type: GET_PRODUCT_SUCCESS, payload: res.data, totalProducts: +(res.headers['x-total-count']) });
+        dispatch({
+          type: GET_PRODUCT_SUCCESS,
+          payload: res.data,
+          totalProducts: +res.headers['x-total-count'],
+        });
       })
       .catch(err => {
         dispatch({ type: PRODUCT_FAILURE });
       });
   };
 
-  const handleDebounce = (val) => {
+  const handleDebounce = val => {
     if (id) clearTimeout(id);
     id = setTimeout(() => {
       handleSearch(val);
@@ -128,7 +131,6 @@ export default function Navbar() {
       borderBottom={'1px solid white'}
       boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}
     >
-
       <Flex
         pos={'relative'}
         bg={useColorModeValue('white', 'gray.800')}
@@ -171,7 +173,9 @@ export default function Navbar() {
         >
           {/* logo section here  */}
           <NavLink to="/">
-            <Box onClick={() => setStatus(false)}><Image src={logo} w="120px" /></Box>
+            <Box onClick={() => setStatus(false)}>
+              <Image src={logo} w="120px" />
+            </Box>
           </NavLink>
 
           <Flex
@@ -192,11 +196,7 @@ export default function Navbar() {
         >
           <Input
             pr="4.5rem"
-<<<<<<< HEAD
             placeholder="Tìm kiếm"
-=======
-            placeholder="search"
->>>>>>> Suong
             onChange={e => handleDebounce(e.target.value)}
           />
           <InputRightElement width="4.5rem">
@@ -211,34 +211,37 @@ export default function Navbar() {
           display={{ base: 'none', md: 'flex' }}
           justifyContent={'space-evenly'}
         >
-
-
           <Menu>
-
             <MenuList>
-<<<<<<< HEAD
-              {auth ? <MenuItem>Hello {user.firstName} {user.lastName}</MenuItem> :
-=======
-              {auth ? <MenuItem>Xin chào {user.firstName} {user.lastName}</MenuItem> :
->>>>>>> Suong
-                <NavLink to='/signup'><MenuItem>{'login / signup'}</MenuItem></NavLink>
-              }
+              {auth ? (
+                <MenuItem>
+                  Xin chào {user.firstName} {user.lastName}
+                </MenuItem>
+              ) : (
+                <NavLink to="/signup">
+                  <MenuItem>{'login / signup'}</MenuItem>
+                </NavLink>
+              )}
             </MenuList>
           </Menu>
           <Menu>
             <MenuButton>
-
-              {auth ? <Avatar w={'35px'} h={'35px'} src={user.pic} name={`${user.firstName} ${user.lastName}`} /> : <FaUser size={'20px'} />}
+              {auth ? (
+                <Avatar
+                  w={'35px'}
+                  h={'35px'}
+                  src={user.pic}
+                  name={`${user.firstName} ${user.lastName}`}
+                />
+              ) : (
+                <FaUser size={'20px'} />
+              )}
               {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
             </MenuButton>
             <MenuList>
               {auth ? (
                 <MenuItem>
-<<<<<<< HEAD
-                  Hello {user.firstName} {user.lastName}
-=======
                   Xin Chào {user.firstName} {user.lastName}
->>>>>>> Suong
                 </MenuItem>
               ) : (
                 <NavLink to="/signup">
@@ -247,21 +250,20 @@ export default function Navbar() {
               )}
 
               <MenuItem>
-<<<<<<< HEAD
-                <UserProfile data={user}>User Profile</UserProfile>
-              </MenuItem>
-              <MenuItem isDisabled={!auth} onClick={handleLogout}>LogOut</MenuItem>
-=======
                 <UserProfile data={user}>Hồ Sơ</UserProfile>
               </MenuItem>
-              <MenuItem isDisabled={!auth} onClick={handleLogout}>Đăng Xuất</MenuItem>
->>>>>>> Suong
-              <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
+              <MenuItem isDisabled={!auth} onClick={handleLogout}>
+                Đăng Xuất
+              </MenuItem>
 
+              <NavLink to="/adminlogin">
+                {' '}
+                <MenuItem>Admin</MenuItem>
+              </NavLink>
             </MenuList>
           </Menu>
           <Box position={'relative'}>
-            {cartData.length > 0 && auth &&
+            {cartData.length > 0 && auth && (
               <Flex
                 w={'22px'}
                 h={'22px'}
@@ -273,8 +275,10 @@ export default function Navbar() {
                 color={text === 'dark' ? 'white' : 'black'}
                 justifyContent={'center'}
                 alignItems={'center'}
-              >{cartData.length}</Flex>
-            }
+              >
+                {cartData.length}
+              </Flex>
+            )}
             <NavLink to="/cart">
               <FaShoppingBag size={'22px'} />
             </NavLink>
@@ -295,10 +299,8 @@ export default function Navbar() {
         bg={textColor}
         py="6px"
         borderRadius={'10px'}
-        boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}      >
-
-
-
+        boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}
+      >
         {/* BOTTOM NAVBAR  */}
         <IconContext.Provider value={{ size: '25px' }}>
           <Flex justifyContent={'space-around'}>
@@ -310,31 +312,36 @@ export default function Navbar() {
             </Box>
             {/* <NavLink to='/adminlogin'> <FaUser /></NavLink> */}
             <Menu>
-
               <MenuList>
-<<<<<<< HEAD
-                {auth ? <MenuItem>Hello {user.firstName} {user.lastName}</MenuItem> :
-=======
-                {auth ? <MenuItem>Xin Chào {user.firstName} {user.lastName}</MenuItem> :
->>>>>>> Suong
-                  <NavLink to='/signup'><MenuItem>{'login / signup'}</MenuItem></NavLink>
-                }
+                {auth ? (
+                  <MenuItem>
+                    Xin Chào {user.firstName} {user.lastName}
+                  </MenuItem>
+                ) : (
+                  <NavLink to="/signup">
+                    <MenuItem>{'login / signup'}</MenuItem>
+                  </NavLink>
+                )}
               </MenuList>
             </Menu>
             <Menu>
               <MenuButton>
-
-                {auth ? <Avatar w={'35px'} h={'35px'} src={user.pic} name={`${user.firstName} ${user.lastName}`} /> : <FaUser size={'20px'} />}
+                {auth ? (
+                  <Avatar
+                    w={'35px'}
+                    h={'35px'}
+                    src={user.pic}
+                    name={`${user.firstName} ${user.lastName}`}
+                  />
+                ) : (
+                  <FaUser size={'20px'} />
+                )}
                 {/* {auth ? user.firstName : <FaUser size={'20px'} />} */}
               </MenuButton>
               <MenuList>
                 {auth ? (
                   <MenuItem>
-<<<<<<< HEAD
-                    Hello {user.firstName} {user.lastName}
-=======
-                   Xin Chào  {user.firstName} {user.lastName}
->>>>>>> Suong
+                    Xin Chào {user.firstName} {user.lastName}
                   </MenuItem>
                 ) : (
                   <NavLink to="/signup">
@@ -343,17 +350,16 @@ export default function Navbar() {
                 )}
 
                 <MenuItem>
-<<<<<<< HEAD
-                  <UserProfile data={user}>User Profile</UserProfile>
-                </MenuItem>
-                <MenuItem isDisabled={!auth} onClick={handleLogout}>LogOut</MenuItem>
-=======
                   <UserProfile data={user}>Hồ Sơ</UserProfile>
                 </MenuItem>
-                <MenuItem isDisabled={!auth} onClick={handleLogout}>Đăng Xuất</MenuItem>
->>>>>>> Suong
-                <NavLink to='/adminlogin'> <MenuItem>Admin</MenuItem></NavLink>
+                <MenuItem isDisabled={!auth} onClick={handleLogout}>
+                  Đăng Xuất
+                </MenuItem>
 
+                <NavLink to="/adminlogin">
+                  {' '}
+                  <MenuItem>Admin</MenuItem>
+                </NavLink>
               </MenuList>
             </Menu>
 
@@ -381,7 +387,8 @@ export default function Navbar() {
             bg="white"
             color="black"
             placeholder="search...."
-            onChange={e => handleDebounce(e.target.value)} />
+            onChange={e => handleDebounce(e.target.value)}
+          />
           <InputRightElement width="4.5rem">
             <CloseIcon
               color="black"
@@ -407,8 +414,8 @@ const DesktopNav = () => {
         <Box key={navItem.label}>
           <Popover trigger={'hover'} placement={'bottom-start'}>
             <PopoverTrigger display="flex" alignItems="center">
-              {
-                navItem.href ? <NavLink to={navItem.href}>
+              {navItem.href ? (
+                <NavLink to={navItem.href}>
                   <Link
                     p={2}
                     fontSize={'15px'}
@@ -422,21 +429,22 @@ const DesktopNav = () => {
                     {navItem.label}
                     {navItem.children ? <ChevronDownIcon w={5} h={5} /> : ''}
                   </Link>
-                </NavLink>:<Link
-                p={2}
-                fontSize={'15px'}
-                fontWeight={'bold'}
-                color={linkColor}
-                _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
-                {navItem.children ? <ChevronDownIcon w={5} h={5} /> : ''}
-              </Link>
-              }
-
+                </NavLink>
+              ) : (
+                <Link
+                  p={2}
+                  fontSize={'15px'}
+                  fontWeight={'bold'}
+                  color={linkColor}
+                  _hover={{
+                    textDecoration: 'none',
+                    color: linkHoverColor,
+                  }}
+                >
+                  {navItem.label}
+                  {navItem.children ? <ChevronDownIcon w={5} h={5} /> : ''}
+                </Link>
+              )}
             </PopoverTrigger>
 
             {navItem.children && (
