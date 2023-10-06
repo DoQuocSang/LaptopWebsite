@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "2b2d17d9-2675-4c5d-9ad2-7f30e0419bcc",
+		"name": "LaptopWeb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30140753"
+	},
+	"item": [
+		{
+			"name": "{{LaptopWeb}}/api/v1/product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DOMAIN}}/api/v1/product",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{DOMAIN}}/api/v1/product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DOMAIN}}/api/v1/product",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{DOMAIN}}/api/v1/product/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DOMAIN}}/api/v1/product/:id",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{DOMAIN}}/api/v1/product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"image\": \"https://diesel.gumlet.io/product/410345352003/665/410345352003_1_5003.webp?compress=true&q=70, https://diesel.gumlet.ioproduct/410345352003/665/410345352003_2_5132.webp?compress=true&q=70, https://diesel.gumlet.io/product/410345352003/665/410345352003_1_5003.webp?compress=true&q=70\",\r\n    \"price\": \"6,299.00\",\r\n    \"line_throu\": \"8,999.00\",\r\n    \"discount\": \"30\",\r\n    \"title\": \"1979 SLEENKER-J Skinny Fit Boys Blue jeans\",\r\n    \"description\": \"Skinny style with a low waist and narrow leg from thigh to ankle, featuring a versatile design with a punk attitude.\",\r\n    \"category\": \"jeans\",\r\n    \"gender\": \"kids\",\r\n    \"color\": \"blue\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DOMAIN}}/api/v1/product",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{DOMAIN}}/api/v1/product/paged?page=1&limit=10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DOMAIN}}/api/v1/product/paged?page=1&limit=10",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"paged"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,17 @@
+---------API----------
+
+*controller
+category_controller.go
+
+*models
+category_models.go
+
+*routers
+router.go
+
+
+--------Sửa thể loại------- (URL: http://localhost:3000/products?brand=REDMI&brand=HP)
+
+
+* src => component => ProductComponent => FilterSort.jsx 	### (từ dòng 139 - 181)
+
