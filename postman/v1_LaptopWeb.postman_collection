@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "2b2d17d9-2675-4c5d-9ad2-7f30e0419bcc",
+		"name": "LaptopWeb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30140753"
+	},
+	"item": [
+		{
+			"name": "{{LaptopWeb}}/api/v1/product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DOMAIN}}/api/v1/product",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{DOMAIN}}/api/v1/product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DOMAIN}}/api/v1/product",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{DOMAIN}}/api/v1/product/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DOMAIN}}/api/v1/product/:id",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{DOMAIN}}/api/v1/product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Laptop MSI Gaming GF63 Thin 11SC i5 11400H/8GB/512GB/4GB GTX1650/144Hz/Win11 (664VN)\",\r\n    \"description\": \"Mang trong mình sức mạnh hiệu năng của bộ vi xử lý Intel Core i5 dòng H mạnh mẽ và card đồ họa rời NVIDIA GeForce GTX, laptop MSI Gaming GF63 Thin 11SC i5 (664VN) có khả năng chiến game nặng và thiết kế đồ họa một cách mượt mà.\",\r\n    \"image\": \"https://phucanhcdn.com/media/product/46971_msi_gaming_gf63_thin_11_h4.jpg, https://bizweb.dktcdn.net/thumb/grande/100/329/122/products/laptop-gaming-msi-gf63-thin-11sc-662vn-1.png?v=1696090116907, https://product.hstatic.net/1000037809/product/thegioigear_laptop_gaming_msi_gf63_thin_11sc_662vn__5_6754be40cc49437d8362ad6d3f021dc9_grande.jpg, https://minhancomputercdn.com/media/product/6231_laptop_msi_gaming_gf63_10sc_014vn_15inch_i5_10200h_gtx_1650_5.jpg \",\r\n    \"price\": 14490000,\r\n    \"discount\": 12,\r\n    \"category_id\": 1,\r\n    \"brand_id\": 1,\r\n    \"cpu\": \"i511400H2.7GHz\",\r\n    \"ram\": \"8 GBDDR4 2 khe (1 khe 8 GB + 1 khe rời)3200 MHz\",\r\n    \"disk\": \"512 GB SSD NVMe PCIeHỗ trợ khe cắm SATA 2.5 inch mở rộng (nâng cấp SSD hoặc HDD đều được)\",\r\n    \"display\": \"15.6\\\" Full HD (1920 x 1080) 144Hz\",\r\n    \"graphic_card\": \"Card rời GTX 1650 Max-Q 4GB\",\r\n    \"time_release\": 2022,\r\n    \"operating_system\": \"Windows 11 Home SL\",\r\n    \"connector\": \"1 x USB Type-C (hỗ trợ USB 3.2, DisplayPort)HDMI2 x USB 3.2Jack tai nghe 3.5 mm\",\r\n    \"design\": \"Vỏ nhựa\",\r\n    \"size\": \"Dài 362.9 mm - Rộng 237.5 mm - Dày 18.9 mm\",\r\n    \"weight\": \"Nặng 1.7 kg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{DOMAIN}}/api/v1/product",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{DOMAIN}}/api/v1/product/paged?page=1&limit=10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{DOMAIN}}/api/v1/product/paged?page=1&limit=10",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"product",
+						"paged"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
